@@ -15,8 +15,8 @@ export default function Display() {
   const [history, setHistory] = useState<string[]>([]);
   return (
     <div className="Display">
-      <History history={history} />
-      <hr></hr>
+      {/* <History history={history} />
+      <hr></hr> */}
       <Input history={history} setHistory={setHistory} />
     </div>
   );

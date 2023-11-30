@@ -1,14 +1,21 @@
 .App {
   text-align: center;
+  background-color: #e3d3bc;
 }
 
 .App-header {
-  background-color: #6b502d;
+  /* background-color: #6b502d; */
   min-height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(1px + 2vmin);
-  color: white;
+  color: #543b1f;
+  font-family: 'font';
+}
+
+@font-face {
+  font-family: 'font';
+  src: url('alata-regular.ttf') format('truetype');
 }

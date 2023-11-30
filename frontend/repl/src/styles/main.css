@@ -17,9 +17,14 @@
 }
 
 .Input {
-  margin: 60vh auto 0;
+  margin: auto auto 0;
   height: 10vh;
 }
+
+fieldset{
+  border: none;
+}
+
 .command-box {
   width: 90%;
   margin: auto;

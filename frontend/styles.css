@@ -7,9 +7,47 @@ body{
     background-color: #e3d3bc;
 }
 
+
+
 h1{
     color: #543b1f;
     font-family: 'font';
     text-align: center;
     font-size: 70px;
+}
+
+.search-container{
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'font';
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 500px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+}
+
+input::placeholder {
+    font-family: 'font';
+    font-size: 15px;
+}
+
+
+button {
+    padding: 10px;
+    background-color: #543b1f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'font';
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+p{
+    font-size: 20px;
+    color: #543b1f;
+    margin-right: 460px;
 }

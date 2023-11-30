@@ -13,9 +13,28 @@
   font-size: 20px;
   color: #543b1f;
   font-family: 'font';
+  /* padding-top: 0px; */
 }
 
 @font-face {
   font-family: 'font';
   src: url('alata-regular.ttf') format('truetype');
+}
+
+p{
+  font-size: 22px;
+  color: #543b1f;
+  font-family: 'font';
+  margin-right: 420px;
+  margin-top: 0px;
+}
+
+h1{
+  margin-left: 400px;
+}
+
+::placeholder{
+  font-family: 'font';
+  font-size: 20px;
+  margin-left: 10px;
 }

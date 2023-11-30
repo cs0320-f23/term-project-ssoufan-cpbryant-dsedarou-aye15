@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'font';
+    src: url('alata-regular.ttf') format('truetype');
+}
+
+body{
+    background-color: #e3d3bc;
+}
+
+h1{
+    color: #543b1f;
+    font-family: 'font';
+    text-align: center;
+    font-size: 70px;
+}

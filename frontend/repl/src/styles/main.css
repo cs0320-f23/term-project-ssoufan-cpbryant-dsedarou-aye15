@@ -9,6 +9,10 @@
   min-height: 100vh;
 }
 
+.limit{
+  margin-right: 400px;
+}
+
 .History {
   height: 55vh;
   margin: auto;
@@ -89,6 +93,11 @@ input[type="radio"]:checked + .radio-label:before {
 label{
   font-family: 'font';
   color: #543b1f;
-  margin-right: 25px;
+  margin-right: 40px;
   font-size: 20px;
+}
+
+.restriction{
+  margin-top: 40px;
+  margin-right: 490px;
 }

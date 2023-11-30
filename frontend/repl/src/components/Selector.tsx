@@ -12,7 +12,7 @@ export function Selector(props: SelectorProps) {
 
   return (
     <div>
-      <p>Select a restriction:</p>
+      <p className="restriction">Select a restriction:</p>
       <div className="radio-container">
         <input
           type="radio"
@@ -43,21 +43,21 @@ export function Selector(props: SelectorProps) {
 
         <input
           type="radio"
+          id="allergen-free"
+          name="restrictions"
+          value="Allergen-Free"
+          onChange={() => handleOptionChange("Allergen-Free")}
+        />
+        <label htmlFor="Allergen-free">Allergen-Free</label>
+
+        <input
+          type="radio"
           id="vegetarian"
           name="restrictions"
           value="Vegetarian"
           onChange={() => handleOptionChange("Vegetarian")}
         />
-        <label htmlFor="vegetarian">Vegetarian</label>
-
-        <input
-          type="radio"
-          id="gluten-free"
-          name="restrictions"
-          value="Gluten-Free"
-          onChange={() => handleOptionChange("Gluten-Free")}
-        />
-        <label htmlFor="gluten-free">Gluten-Free</label>
+        <label htmlFor="Vegetarian">Vegetarian</label>
       </div>
     </div>
   );

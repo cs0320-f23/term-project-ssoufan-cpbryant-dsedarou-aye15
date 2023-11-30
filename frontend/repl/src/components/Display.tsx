@@ -18,7 +18,7 @@ export default function Display() {
     <div className="Display">
       {/* <History history={history} />
       <hr></hr> */}
-      <p>Enter your daily calorie limit:</p>
+      <p className="limit">Enter your daily calorie limit:</p>
       <Input history={history} setHistory={setHistory} />
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={function (selectedOption: string): void {

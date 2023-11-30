@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrownBites</title>
     <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="header">
@@ -13,7 +14,7 @@
     <div class="search-container">
       <p>Enter your daily calorie limit:</p>
       <input type="text" id="searchBox" placeholder="(Default 2500 calories)">
-      <button type="submit">craft meal plan</button>
+      <button id="submitButton" type="submit" onclick="toggleSubmit()">craft meal plan</button>
     </div>
   </body>
 </html>

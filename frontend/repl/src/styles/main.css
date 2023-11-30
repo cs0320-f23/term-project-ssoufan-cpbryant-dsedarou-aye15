@@ -23,13 +23,16 @@
 
 fieldset{
   border: none;
+  /* height: 50px;
+  width: 20px;  */
 }
 
 .command-box {
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: block;
 }
+
 button {
   margin: auto;
   display: block;

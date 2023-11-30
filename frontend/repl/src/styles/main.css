@@ -1,0 +1,39 @@
+/*
+  This is a reasonable starting point for the CSS in Mock.
+  Positioning in CSS can sometimes be annoying to manage, so we've opted to 
+  give you this starter CSS. Feel free to modify it as you wish, though.
+*/
+
+.Display {
+  position: relative;
+  min-height: 100vh;
+}
+
+.History {
+  height: 55vh;
+  margin: auto;
+  display: block;
+  overflow: scroll;
+}
+
+.Input {
+  margin: auto auto 0;
+  height: 10vh;
+}
+
+fieldset{
+  border: none;
+  /* height: 50px;
+  width: 20px;  */
+}
+
+.command-box {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+button {
+  margin: auto;
+  display: block;
+}

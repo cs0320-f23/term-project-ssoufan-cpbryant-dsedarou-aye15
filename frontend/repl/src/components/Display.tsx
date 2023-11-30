@@ -3,6 +3,7 @@ import "../styles/main.css";
 import { History } from "./History";
 import { Input } from "./Input";
 import React from "react";
+import { Selector } from "./Selector";
 
 /**
  * The main component.
@@ -17,7 +18,12 @@ export default function Display() {
     <div className="Display">
       {/* <History history={history} />
       <hr></hr> */}
+      <p className="limit">Enter your daily calorie limit:</p>
       <Input history={history} setHistory={setHistory} />
+      {/* <p>Select any restrictions:</p> */}
+      <Selector onSelect={function (selectedOption: string): void {
+        throw new Error("Function not implemented.");
+      } }/>
     </div>
   );
 }

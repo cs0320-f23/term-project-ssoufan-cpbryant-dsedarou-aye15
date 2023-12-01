@@ -37,11 +37,13 @@ export default function Display() {
       <hr></hr> */}
       <p className="limit">Enter your daily calorie limit:</p>
       <Input history={history} setHistory={setHistory} />
-      <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
       {/* <p>Select any restrictions:</p> */}
-      <Selector onSelect={function (selectedOption: string): void {
-        throw new Error("Function not implemented.");
-      } }/>
+      <Selector
+        onSelect={function (selectedOption: string): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+      <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
     </div>
   );
 }

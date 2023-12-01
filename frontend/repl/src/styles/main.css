@@ -21,7 +21,7 @@
   height: 10vh;
 }
 
-fieldset{
+fieldset {
   border: none;
   /* height: 50px;
   width: 20px;  */
@@ -36,4 +36,45 @@ fieldset{
 button {
   margin: auto;
   display: block;
+}
+
+.calendar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  color: white;
+}
+
+#col1 {
+  color: #543b1f;
+}
+
+#col2 {
+  color: #543b1f;
+}
+
+#col3 {
+  color: #543b1f;
+}
+
+th {
+  background-color: #543b1f;
+}
+
+button {
+  margin-left: 5px;
+  cursor: pointer;
 }

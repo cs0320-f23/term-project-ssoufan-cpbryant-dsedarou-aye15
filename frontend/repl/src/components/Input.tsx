@@ -57,7 +57,7 @@ export function Input(props: InputProps) {
           ariaLabel={"Command input"}
         />
       </fieldset>
-      <button id="submit">Submit</button>
+      <button id="submit">craft meal plan</button>
     </div>
   );
 }

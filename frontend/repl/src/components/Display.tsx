@@ -4,7 +4,7 @@ import { History } from "./History";
 import { Input } from "./Input";
 import Calendar from "./Calendar"; // Import the Calendar component
 import React from "react";
-import { Selector } from "./Selector";
+import { Selector, searchCommandFunction } from "./Selector";
 
 /**
  * The main component.
@@ -31,6 +31,11 @@ export default function Display() {
     setMealPlan(updatedMealPlan);
   };
 
+const handleSelect = async (selectedOption: string) => {
+    console.log("Selected option:", selectedOption);
+    const result = await searchCommandFunction(selectedOption);
+  };
+  
   return (
     <div className="Display">
       {/* <History history={history} />
@@ -38,11 +43,7 @@ export default function Display() {
       <p className="limit">Enter your daily calorie limit:</p>
       <Input history={history} setHistory={setHistory} />
       {/* <p>Select any restrictions:</p> */}
-      <Selector
-        onSelect={function (selectedOption: string): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
+      <Selector onSelect={handleSelect} />
       <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
     </div>
   );

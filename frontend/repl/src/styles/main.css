@@ -134,7 +134,7 @@ input[type="radio"]:checked + .radio-label:before {
 label{
   font-family: 'font';
   color: #543b1f;
-  margin-right: 40px;
+  margin-right: 30px;
   font-size: 20px;
 }
 

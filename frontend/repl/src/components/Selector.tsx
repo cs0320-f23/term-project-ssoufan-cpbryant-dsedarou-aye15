@@ -1,63 +1,109 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/main.css";
 
 interface SelectorProps {
   onSelect: (selectedOption: string) => void;
 }
 
-export function Selector(props: SelectorProps) {
-  const handleOptionChange = (selectedOption: string) => {
-    props.onSelect(selectedOption);
-  };
+export interface SelectorFunction {
+  (args: Array<string>): Promise<string>;
+}
 
+export function searchCommandFunction(selectedOption: string): Promise<string> {
+  return new Promise(async (resolve) => {
+    try {
+      const response = await fetch(
+        `http://localhost:2023/menu?restriction=` + selectedOption
+      );
+      console.log(selectedOption)
+      const json = await response.json();
+      console.log(json);
+      if (json.result === "success") {
+        resolve(json.data);
+      } else {
+        resolve(
+          "An error occurred while trying to search. The correct syntax is: search <keyword> <header/index>"
+        );
+      }
+    } catch (error) {
+      resolve("An error occurred: " + error);
+    }
+  });
+}
+
+export function Selector(props: SelectorProps) {
+  const [selectedOption, setSelectedOption] = useState<string>("");
+
+  const handleOptionChange = (selectedValue: string) => {
+    setSelectedOption(selectedValue);
+    props.onSelect(selectedValue);
+  };
   return (
     <div>
-      <p className="restriction">Select a restriction:</p>
+      <p className="restriction">Select an allergy:</p>
       <div className="radio-container">
         <input
           type="radio"
-          id="vegan"
+          id="Eggs"
           name="restrictions"
-          value="Vegan"
-          onChange={() => handleOptionChange("Vegan")}
+          value="Eggs"
+          onChange={() => handleOptionChange("Eggs")}
         />
-        <label htmlFor="vegan">Vegan</label>
+        <label htmlFor="Eggs">Eggs</label>
 
         <input
           type="radio"
-          id="halal"
+          id="Soy"
           name="restrictions"
-          value="Halal"
-          onChange={() => handleOptionChange("Halal")}
+          value="Soy"
+          onChange={() => handleOptionChange("Soy")}
         />
-        <label htmlFor="halal">Halal</label>
+        <label htmlFor="Soy">Soy</label>
 
         <input
           type="radio"
-          id="kosher"
+          id="Milk"
           name="restrictions"
-          value="Kosher"
-          onChange={() => handleOptionChange("Kosher")}
+          value="Milk"
+          onChange={() => handleOptionChange("Milk")}
         />
-        <label htmlFor="kosher">Kosher</label>
+        <label htmlFor="Milk">Milk</label>
 
         <input
           type="radio"
-          id="allergen-free"
+          id="Wheat"
           name="restrictions"
-          value="Allergen-Free"
-          onChange={() => handleOptionChange("Allergen-Free")}
+          value="Wheat"
+          onChange={() => handleOptionChange("Wheat")}
         />
-        <label htmlFor="Allergen-free">Allergen-Free</label>
+        <label htmlFor="Wheat">Wheat</label>
 
         <input
           type="radio"
-          id="vegetarian"
+          id="Gluten"
           name="restrictions"
-          value="Vegetarian"
-          onChange={() => handleOptionChange("Vegetarian")}
+          value="Gluten"
+          onChange={() => handleOptionChange("Gluten")}
         />
-        <label htmlFor="Vegetarian">Vegetarian</label>
+        <label htmlFor="Gluten">Gluten</label>
+
+        <input
+          type="radio"
+          id="Alcohol"
+          name="restrictions"
+          value="Alcohol"
+          onChange={() => handleOptionChange("Alcohol")}
+        />
+        <label htmlFor="Alcohol">Alcohol</label>
+
+        <input
+          type="radio"
+          id="Shellfish"
+          name="restrictions"
+          value="Shellfish"
+          onChange={() => handleOptionChange("Shellfish")}
+        />
+        <label htmlFor="Shellfish">Shellfish</label>
       </div>
     </div>
   );

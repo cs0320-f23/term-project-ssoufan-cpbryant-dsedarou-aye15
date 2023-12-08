@@ -7,6 +7,7 @@ import edu.brown.cs.student.main.CSV.CSVData;
 import edu.brown.cs.student.main.Exceptions.FactoryFailureException;
 import edu.brown.cs.student.main.Handlers.BroadbandHandler;
 import edu.brown.cs.student.main.Handlers.LoadHandler;
+import edu.brown.cs.student.main.Handlers.MenuHandler;
 import edu.brown.cs.student.main.Handlers.SearchHandler;
 import edu.brown.cs.student.main.Handlers.ViewHandler;
 import java.io.IOException;

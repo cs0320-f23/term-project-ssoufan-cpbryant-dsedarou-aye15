@@ -1,0 +1,31 @@
+Meal,Item,Calories,Serving Size,Restriction
+Breakfast,Hard Boiled Eggs,133,2 eggs,Eggs,-
+Breakfast,Fried Eggs,132,2 eggs,Eggs,-
+Breakfast,Vegetarian Omelette,201,6oz,Soy,Eggs,Milk,-
+Breakfast,Egg White Omelette,46,100g,Eggs,-
+Breakfast,Scrambled Eggs with Cheese,201,4oz,Eggs,Milk,,-
+Breakfast,Veggie Sausage Pattie,160,2 patties,Wheat,Soy,Eggs,Milk,Gluten,,-
+Breakfast,Gingerbread Donut,216,1 donut,Wheat,Soy,Eggs,Milk,Alcohol,Gluten,,-
+Breakfast,Basic Tofu Scramble,133,3.5oz,Soy,-
+Breakfast,Vegan Chocolate Banana Bread,291,1 slice,Wheat,Soy,Alcohol,Gluten,-
+Breakfast,Maple Cream Cheese French Toast Casserole,388,4oz,Wheat,Soy,Eggs,Milk,Alcohol,Gluten,-
+Lunch,Romano,-Dijon Crusted Chicken,517,8oz,Wheat,Soy,Eggs,Milk,-
+Lunch,Rigatoni,278,8oz,Wheat,Gluten,-
+Lunch,Roasted Romano Potatoes,111,4oz,Milk,-
+Lunch,Whole Wheat Penne,300,4oz,Wheat,Gluten,-
+Lunch,Ham & Bean Soup,133,6oz,Milk,-
+Lunch,Cheese Pizza,192,1 slice,Wheat,Milk,Gluten,-
+Lunch,Pepperoni Pizza,263,1 slice,Wheat,Milk,Gluten,-
+Lunch,Meat Lovers' Pizza,221,1 slice,Wheat,Milk,Gluten,-
+Lunch,Creamy Pesto Pasta Shrimp Saute,206,8oz,Wheat,Milk,Gluten,Shellfish,-
+Lunch,Chocolate Chili Spice Cookies,181,1 cookie,Wheat,Milk,Gluten,Soy,Alcohol,-
+Lunch,Vegan Blondies with Cranberry,262,1 bar,Wheat,Soy,Gluten,Alcohol,-
+Dinner,Rigatoni,278,8oz,Wheat,Gluten,-
+Dinner,Whole Wheat Penne,300,4oz,Wheat,Gluten,-
+Dinner,Ham & Bean Soup,133,6oz,Milk,-
+Dinner,Cheese Pizza,192,1 slice,Wheat,Gluten,Milk,-
+Dinner,Pepperoni Pizza,263,1 slice,Wheat,Gluten,Milk,-
+Dinner,Meat Lovers' Pizza,221,1 slice,Wheat,Gluten,Milk,-
+Dinner,Naan Bread,376,125g,Wheat,Gluten,Milk,Eggs,-
+Dinner,Vegan Red Velvet Cupcake,502,1 cupcake,Wheat,Soy,Alcohol,Gluten,-
+Dinner,Birthday Cake,265,2.8oz,Wheat,Soy,Eggs,Milk,Gluten,-

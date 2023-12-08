@@ -9,7 +9,7 @@
   min-height: 100vh;
 }
 
-.limit{
+.limit {
   margin-right: 400px;
 }
 
@@ -48,25 +48,24 @@ button {
   height: 55px;
   background-color: #543b1f;
   color: white;
-  font-family: 'font';
+  font-family: "font";
   font-size: 20px;
 }
 
 @font-face {
-  font-family: 'font';
-  src: url('alata-regular.ttf') format('truetype');
+  font-family: "font";
+  src: url("alata-regular.ttf") format("truetype");
 }
 
-body{
+body {
   padding: 0px;
-  margin: 0px; 
+  margin: 0px;
 }
 
 /* Add the following styles for the Selector component */
 .Selector {
-  margin-top: 50px; 
+  margin-top: 50px;
 }
-
 
 .radio-label {
   position: relative;
@@ -76,7 +75,7 @@ body{
 }
 
 .radio-label:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px; /* Adjust the width of the circle */
   height: 20px; /* Adjust the height of the circle */
@@ -131,14 +130,56 @@ input[type="radio"]:checked + .radio-label:before {
   background-color: #543b1f; /* Color when selected */
 }
 
-label{
-  font-family: 'font';
+label {
+  font-family: "font";
   color: #543b1f;
   margin-right: 30px;
   font-size: 20px;
 }
 
-.restriction{
+.restriction {
   margin-top: 40px;
   margin-right: 490px;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.repl-history {
+  flex: 1 auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.repl-input {
+  flex: 0 auto;
+  height: 10vh;
+  width: 100%;
+}
+
+.repl-command-box {
+  flex: 0 auto;
+  width: 90%;
+  max-width: 100%;
+} */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3d3bc
+}
+
+.centered-button {
+  justify-self: center;
+  /* margin-left: 500px; */
+  /* margin-top: 0px; */
+  /* margin-bottom: 100px; */
+  cursor: pointer;
 }

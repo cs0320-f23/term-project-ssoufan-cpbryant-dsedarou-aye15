@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import "../styles/main.css";
 import { History } from "./History";
 import { Input } from "./Input";
-import Calendar from "./Calendar"; // Import the Calendar component
+import Calendar from "./Calendar";
 import React from "react";
 import { Selector } from "./Selector";
+import { CommunityHistory } from "./CommnityHistory";
+import { CommunityInput } from "./CommunityInput";
 
 /**
  * The main component.
@@ -18,6 +20,7 @@ import { Selector } from "./Selector";
 export default function Display() {
   const [history, setHistory] = useState<string[]>([]);
   const [mealPlan, setMealPlan] = useState<string[]>([]);
+  const [communityHistory, setCommunityHistory] = useState<string[]>([]);
 
   // Function to add a meal to the meal plan
   const addMeal = (meal: string) => {
@@ -44,6 +47,17 @@ export default function Display() {
         }}
       />
       <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
+      <div className="repl">
+        <hr></hr>
+        <p className="App-header">
+          <h1>Community Section!</h1>
+        </p>
+        <CommunityHistory history={communityHistory} />
+        <CommunityInput
+          history={communityHistory}
+          setHistory={setCommunityHistory}
+        />
+      </div>
     </div>
   );
 }

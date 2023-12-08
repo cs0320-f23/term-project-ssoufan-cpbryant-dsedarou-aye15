@@ -18,6 +18,7 @@ import { Selector, searchCommandFunction } from "./Selector";
 export default function Display() {
   const [history, setHistory] = useState<string[]>([]);
   const [mealPlan, setMealPlan] = useState<string[]>([]);
+  const [commandString, setCommandString] = useState<string>(""); // Initialize commandString state
 
   // Function to add a meal to the meal plan
   const addMeal = (meal: string) => {
@@ -31,19 +32,20 @@ export default function Display() {
     setMealPlan(updatedMealPlan);
   };
 
-const handleSelect = async (selectedOption: string) => {
+  const handleSelect = async (selectedOption: string) => {
     console.log("Selected option:", selectedOption);
+    setCommandString(selectedOption); // Set the commandString when an option is selected
     const result = await searchCommandFunction(selectedOption);
   };
-  
+
   return (
     <div className="Display">
       {/* <History history={history} />
       <hr></hr> */}
       <p className="limit">Enter your daily calorie limit:</p>
-      <Input history={history} setHistory={setHistory} />
+      <Input history={history} setHistory={setHistory} setCommandString={setCommandString} />
       {/* <p>Select any restrictions:</p> */}
-      <Selector onSelect={handleSelect} />
+      <Selector onSelect={handleSelect} commandString={commandString} />
       <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
     </div>
   );

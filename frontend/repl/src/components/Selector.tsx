@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/main.css";
-
 interface SelectorProps {
   onSelect: (selectedOption: string) => void;
+  commandString: string; // Add commandString prop
 }
 
 export interface SelectorFunction {
   (args: Array<string>): Promise<string>;
 }
+
 
 export function searchCommandFunction(selectedOption: string): Promise<string> {
   return new Promise(async (resolve) => {
@@ -33,6 +34,11 @@ export function searchCommandFunction(selectedOption: string): Promise<string> {
 
 export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
+
+  useEffect(() => {
+    // This will log the commandString whenever it changes
+    console.log("Command String:", props.commandString);
+  }, [props.commandString]);
 
   const handleOptionChange = (selectedValue: string) => {
     setSelectedOption(selectedValue);

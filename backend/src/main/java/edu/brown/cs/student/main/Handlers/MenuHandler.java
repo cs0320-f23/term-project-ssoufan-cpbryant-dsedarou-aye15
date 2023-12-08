@@ -92,6 +92,7 @@ public class MenuHandler implements Route{
         Map<String, Object> responseMap = new HashMap<>();
 //        responseMap.put("data", data);
 //        System.out.println(data);
+        responseMap.put("result", "success");
         for (int i = 0; i < data.size(); i++){
           Map<String, String> map = new HashMap<>();
           map.put("Meal", data.get(i).get(0));
@@ -100,7 +101,7 @@ public class MenuHandler implements Route{
           map.put("Serving size", data.get(i).get(3));
           responseMap.put("item: " + i, map);
         }
-//        System.out.println(responseMap);
+        System.out.println(responseMap);
 //        responseMap.put("result", "success");
         return adapter.toJson(responseMap);
 //        return adapter.toJson(this);
@@ -130,6 +131,8 @@ public class MenuHandler implements Route{
       JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
       Map<String, Object> responseMap = new HashMap<>();
       responseMap.put("result", "failure");
+      responseMap.put("error_description", "Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
+          + "Alcohol, Soy, Shellfish, Gluten, Wheat, Eggs, Milk, or leave it empty for no restriction]");
       return adapter.toJson(responseMap);
     }
   }

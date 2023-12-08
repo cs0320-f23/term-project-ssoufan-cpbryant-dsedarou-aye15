@@ -38,7 +38,7 @@ public class Main {
     Spark.get("viewCSV", new ViewHandler(data));
     Spark.get("searchCSV", new SearchHandler(data));
     Spark.get("broadband", new BroadbandHandler(new RealBBSource()));
-    Spark.get("menu", new MenuHandler("/Users/annieye/Desktop/cs32/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/src/main/java/menu.csv"));
+    Spark.get("menu", new MenuHandler("C:\\cs32\\term-project-ssoufan-cpbryant-dsedarou-aye15\\backend\\src\\main\\java\\menu.csv"));
     // have to go to endpoint mock for the website to not have 404 error
 
     Spark.init();

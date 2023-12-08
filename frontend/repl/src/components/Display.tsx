@@ -4,7 +4,7 @@ import { History } from "./History";
 import { Input } from "./Input";
 import Calendar from "./Calendar"; // Import the Calendar component
 import React from "react";
-import { Selector, searchCommandFunction } from "./Selector";
+import { Selector } from "./Selector";
 
 /**
  * The main component.
@@ -33,9 +33,9 @@ export default function Display() {
   };
 
   const handleSelect = async (selectedOption: string) => {
-    console.log("Selected option:", selectedOption);
+    // console.log("Selected option:", selectedOption);
     setCommandString(selectedOption); // Set the commandString when an option is selected
-    const result = await searchCommandFunction(selectedOption);
+    // const result = await searchCommandFunction(selectedOption);
   };
 
   return (

@@ -10,40 +10,77 @@ export interface SelectorFunction {
 }
 
 
-export function searchCommandFunction(selectedOption: string): Promise<string> {
+export function searchCommandFunction(selectedOption: string, commandString: string): Promise<string> {
   return new Promise(async (resolve) => {
     try {
       const response = await fetch(
         `http://localhost:2023/menu?restriction=` + selectedOption
       );
-      console.log(selectedOption)
       const json = await response.json();
       console.log(json);
-      if (json.result === "success") {
-        resolve(json.data);
-      } else {
-        resolve(
-          "An error occurred while trying to search. The correct syntax is: search <keyword> <header/index>"
-        );
-      }
+      console.log(commandString);
+      processSearchResult(commandString, json);
+      // if (json.result === "success") {
+      //   processSearchResult(commandString, json);
+      //   resolve(json);
+      // } else {
+      //   resolve(
+      //     "An error occurred while trying to search. The correct syntax is: search <keyword> <header/index>"
+      //   );
+      // }
     } catch (error) {
       resolve("An error occurred: " + error);
     }
   });
 }
 
+export function processSearchResult(commandString: string, searchData: string | object): void {
+  try {
+    console.log("Command String:", commandString);
+
+    // Check if the searchData is already an object
+    const parsedData = typeof searchData === 'string' ? JSON.parse(searchData) : searchData;
+
+    // Check if the parsedData is an object
+    if (typeof parsedData === 'object' && !Array.isArray(parsedData)) {
+      Object.keys(parsedData).forEach((key) => {
+        const item = parsedData[key];
+        const calories = item.Calories;
+        console.log(`Calories: ${calories}`);
+        // You can use the 'calories' variable for further processing if needed
+      });
+    } else {
+      console.error('Parsed data is not an object.');
+    }
+
+    // Perform any other processing based on your requirements
+    // ...
+  } catch (error) {
+    console.error("Error processing search result:", error);
+  }
+}
+
+
+
+
+
+
 export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
 
-  useEffect(() => {
-    // This will log the commandString whenever it changes
-    console.log("Command String:", props.commandString);
-  }, [props.commandString]);
+  // useEffect(() => {
+  //   // This will log the commandString whenever it changes
+  //   console.log("Command String:", props.commandString);
+  // }, [props.commandString]);
 
-  const handleOptionChange = (selectedValue: string) => {
+  const handleOptionChange = async (selectedValue: string) => {
     setSelectedOption(selectedValue);
     props.onSelect(selectedValue);
+    const result = await searchCommandFunction(selectedValue, props.commandString);
+    // Use the result as needed
   };
+
+
   return (
     <div>
       <p className="restriction">Select an allergy:</p>

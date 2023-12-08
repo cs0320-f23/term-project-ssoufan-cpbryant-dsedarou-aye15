@@ -7,16 +7,18 @@ interface InputProps {
   setCommandString: Dispatch<SetStateAction<string>>; // Add setCommandString prop
 }
 
+
 export function Input(props: InputProps) {
   const [commandString, setCommandString] = useState<string>("");
 
   const handleCraftMealPlan = () => {
     // Log the input for calories when submitting the form
-    console.log("Input for calories:", commandString);
+    // console.log("Input for calories:", commandString);
     props.setCommandString(commandString);
 
     // Here, you can perform any further actions related to crafting the meal plan
   };
+  
   
 
   return (

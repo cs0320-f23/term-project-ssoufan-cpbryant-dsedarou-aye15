@@ -67,12 +67,31 @@ export function processSearchResult(commandString: string, searchData: string | 
       // Function to check if an item is already selected
       const isItemSelected = (item: string) => selectedItems.some(selected => selected.item === item);
 
+      // Select one item from each meal
+      ['breakfast', 'lunch', 'dinner'].forEach(meal => {
+        const mealArray = meal === 'breakfast' ? breakfastArray : meal === 'lunch' ? lunchArray : dinnerArray;
+        if (mealArray.length > 0) {
+          const item = mealArray[0];
+          selectedItems.push({
+            meal,
+            item: item.item,
+            calories: parseInt(item.calories),
+            portionSize: item.portionSize,
+          });
+          totalCalories += parseInt(item.calories);
+        }
+      });
+
+      // Calculate the remaining target number of items for each meal
+      const remainingTargetItemCount = Math.floor((calories - totalCalories) / 2);
+
       // Loop through meals in order: breakfast, lunch, dinner
       ['breakfast', 'lunch', 'dinner'].forEach(meal => {
         const mealArray = meal === 'breakfast' ? breakfastArray : meal === 'lunch' ? lunchArray : dinnerArray;
 
         // Loop through items in the mealArray
-        for (const item of mealArray) {
+        let remainingItemsToAdd = remainingTargetItemCount;
+        for (const item of mealArray.slice(1)) {
           // Check if the item is not already selected and adding it won't exceed total calories
           if (!isItemSelected(item.item) && totalCalories + parseInt(item.calories) <= calories) {
             selectedItems.push({
@@ -82,6 +101,11 @@ export function processSearchResult(commandString: string, searchData: string | 
               portionSize: item.portionSize,
             });
             totalCalories += parseInt(item.calories);
+            remainingItemsToAdd--;
+          }
+
+          if (remainingItemsToAdd <= 0) {
+            break;
           }
         }
       });
@@ -95,11 +119,6 @@ export function processSearchResult(commandString: string, searchData: string | 
     console.error("Error processing search result:", error);
   }
 }
-
-
-
-
-
 
 export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");

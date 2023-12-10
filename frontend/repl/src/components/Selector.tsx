@@ -36,25 +36,61 @@ export function searchCommandFunction(selectedOption: string, commandString: str
 
 export function processSearchResult(commandString: string, searchData: string | object): void {
   try {
-    console.log("Command String:", commandString);
+    const calories = parseInt(commandString);
+    console.log("Command String:", calories);
 
     // Check if the searchData is already an object
     const parsedData = typeof searchData === 'string' ? JSON.parse(searchData) : searchData;
 
     // Check if the parsedData is an object
     if (typeof parsedData === 'object' && !Array.isArray(parsedData)) {
+      const breakfastArray: { item: string, calories: string, portionSize: string }[] = [];
+      const lunchArray: { item: string, calories: string, portionSize: string }[] = [];
+      const dinnerArray: { item: string, calories: string, portionSize: string }[] = [];
+
       Object.keys(parsedData).forEach((key) => {
         const item = parsedData[key];
-        const calories = item.Calories;
-        console.log(`Calories: ${calories}`);
-        // You can use the 'calories' variable for further processing if needed
+        const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
+
+        if (item.Meal.toLowerCase() === 'breakfast') {
+          breakfastArray.push(itemInfo);
+        } else if (item.Meal.toLowerCase() === 'lunch') {
+          lunchArray.push(itemInfo);
+        } else if (item.Meal.toLowerCase() === 'dinner') {
+          dinnerArray.push(itemInfo);
+        }
       });
+
+      const selectedItems: { meal: string, item: string, calories: number, portionSize: string }[] = [];
+      let totalCalories = 0;
+
+      // Function to check if an item is already selected
+      const isItemSelected = (item: string) => selectedItems.some(selected => selected.item === item);
+
+      // Loop through meals in order: breakfast, lunch, dinner
+      ['breakfast', 'lunch', 'dinner'].forEach(meal => {
+        const mealArray = meal === 'breakfast' ? breakfastArray : meal === 'lunch' ? lunchArray : dinnerArray;
+
+        // Loop through items in the mealArray
+        for (const item of mealArray) {
+          // Check if the item is not already selected and adding it won't exceed total calories
+          if (!isItemSelected(item.item) && totalCalories + parseInt(item.calories) <= calories) {
+            selectedItems.push({
+              meal,
+              item: item.item,
+              calories: parseInt(item.calories),
+              portionSize: item.portionSize,
+            });
+            totalCalories += parseInt(item.calories);
+          }
+        }
+      });
+
+      // Log the selected items
+      console.log("Selected Items:", selectedItems);
     } else {
       console.error('Parsed data is not an object.');
     }
-
-    // Perform any other processing based on your requirements
-    // ...
   } catch (error) {
     console.error("Error processing search result:", error);
   }

@@ -10,7 +10,7 @@
 }
 
 .limit {
-  margin-right: 400px;
+  margin-right: 40px;
 }
 
 .History {
@@ -44,7 +44,7 @@ fieldset {
 button {
   margin: 5px;
   display: block;
-  width: 200px;
+  width: 150px;
   height: 55px;
   background-color: #543b1f;
   color: white;
@@ -139,7 +139,7 @@ label {
 
 .restriction {
   margin-top: 40px;
-  margin-right: 490px;
+  /* margin-right: 490px; */
 }
 
 /* .container {

@@ -32,7 +32,7 @@ export function Input(props: InputProps) {
         />
       </fieldset>
       <button id="submit" onClick={handleCraftMealPlan}>
-        craft meal plan
+        confirm
       </button>
     </div>
   );

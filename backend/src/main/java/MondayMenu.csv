@@ -1,0 +1,87 @@
+Meal,Item,Calories,Serving Size,Restriction
+Breakfast,Ratty Egg White Omlet,45,6oz,Vegetarian,Halal,-
+Breakfast,Ratty Fried Eggs,130,2 eggs,Vegetarian,Halal,-
+Breakfast,Ratty Scrambled Eggs,170,4oz,Vegetarian,Halal,-
+Breakfast,Ratty Hard Boiled Eggs,240,2 eggs,Vegetarian,Halal,Gluten,-
+Breakfast,Ratty Steak & Egg Frittata,400,1 serving,-
+Breakfast,Ratty Blueberry Pancakes,350,2 pancakes,Halal,-
+Breakfast,Ratty Veggie Sausage Patty,160,2 patties,Vegetarian,-
+Breakfast,Ratty Tater Tots,200,4oz,Halal,-
+Breakfast,Ratty Brown Rice,300,1 cup,Vegan,Gluten,Halal,-
+Breakfast,Ratty Cranberry Coffee Cake,400,1 slice,-
+Breakfast,Ratty Zucchini Muffin,250,1 muffin,Vegan,-
+Breakfast,Ratty Steel Cut Oats,150,1 cup,Vegan,Halal,-
+Breakfast,Ratty Plain Yogurt,150,8oz,Vegan,Gluten,Halal,-
+Breakfast,Ratty Turkey Breakfast Sausage,100,1 sausage,-
+Lunch,Ratty French Onion Soup,380,1 cup,-
+Lunch,Ratty Minestrone Soup,270,1 cup,Vegan,-
+Lunch,Ratty Tortellini,250,3oz,-
+Lunch,Ratty Balsamic Marinated Chicken,140,1 piece,-
+Lunch,Ratty Garlicky Green Beans,100,5oz,Vegan,Gluten,-
+Lunch,Ratty Roasted Cauliflower,80,6oz,Halal,Vegan,Vegetarian-
+Lunch,Ratty Turkey Melt,550,1 sandwhich,Halal-
+Lunch,Ratty Basmati Rice,250,1 cup,Halal-
+Lunch,Ratty Mint Chocolate Chip Cookie,100,1 piece,-
+Lunch,Ratty Magic Cookie Bars,300,1 piece,Vegan-
+Lunch,Ratty Italian Salad,200,1 serving,Vegetarian,-
+Lunch,Ratty Crinkle-Cut Fries,360,3oz,Halal,-
+Lunch,Ratty Grilled Chicken,280,1 piece,Gluten,-
+Lunch,Ratty Saugy Hot Dog,170,1 piece,Vegan,-
+Lunch,Ratty Breaded Chickn Cutlet,250,1 piece,-
+Lunch,Ratty Cheese Pizza,190,1 slice,Vegetarian,Halal,-
+Lunch,Ratty Veggie Pizza,200,1 slice,Vegetarian,-
+Lunch,Ratty Pepperoni Pizza,260,1 slice,-
+Lunch,Ratty Rigatoni,280,8oz,-
+Lunch,Ratty Whole Wheat Penne,300,4oz,Vegan,-
+Dinner,Ratty French Onion Soup,380,1 cup,-
+Dinner,Ratty Minestrone Soup,270,1 cup,Vegan,-
+Dinner,Ratty Spicy Cuban Beef Stir-fry,150,1 cup,-
+Dinner,Ratty Cuban Style Black Beans,200,1 cup,Vegan,-
+Dinner,Ratty Cajun Pasta,500,1 bowl,Vegetarian,-
+Dinner,Ratty Cilantro Rice,200,1 cup,Halal,-
+Dinner,Ratty Cumin Roasted Sweet Potatoes,150,4oz,Vegan, Halal,-
+Dinner,Ratty Chicken Taco Salad,250,4oz,-
+Dinner,Ratty Smores Cupcakes,280,1 cupcake,-
+Dinner,Ratty Vanilla Cake,250,1 slice,Vegan,-
+Dinner,Ratty Italian Salad,200,1 serving,Halal,Vegetarian,-
+Dinner,Ratty Crinkle-Cut Fries,360,3oz,Halal,-
+Dinner,Ratty Grilled Chicken,280,1 piece,Gluten,Halal,-
+Dinner,Ratty Saugy Hot Dog,170,1 piece,Gluten,-
+Dinner,Ratty Breaded Chicken Cutlet,250,1 piece,Vegan,-
+Dinner,Ratty Cheese Pizza,190,1 slice,Vegetarian,Halal,-
+Dinner,Ratty Veggie Pizza,200,1 slice,Vegetarian,-
+Dinner,Ratty Pepperoni Pizza,260,1 slice,-
+Dinner,Ratty Rigatoni,280,8oz,-
+Dinner,Ratty Whole Wheat Penne,300,4oz,Vegan,-
+Breakfast,VDub Scrambled Eggs,180,2 eggs,Vegetarian, Halal, Gluten,-
+Breakfast,VDub Veggie Sausage Pattie ,70,1 patty,Vegan,-
+Breakfast,VDub Applewood Smoked Bacon ,120,3 pieces ,Vegan,-
+Breakfast,VDub Tex Mex Tofu Scramble,200,1 cup,Vegan, Gluten,-
+Breakfast,VDub Hard Boiled Eggs (w),140,2 eggs,Vegetarian,Halal,Gluten, -
+Breakfast,VDub Tater Tots ,150,10 tots,-
+Breakfast,VDub Roasted Broccoli,55,1 cup,Vegan,Halal,Gluten,-
+Breakfast,VDub Oatmeal,150,1 cup,Vegetarian,Halal,-
+Breakfast,VDub Omelet,90,1 egg,Vegetarian,Halal,-
+Breakfast,VDub Yogurt,150, 1 cup,Vegetarian,Halal,-
+Breakfast,VDub Cranberry Coffee Cake,350,1 slice,-
+Breakfast,VDub Vegan Zucchini Muffin,150,1 muffin,Vegan,-
+Lunch,VDub Vegan Buffalo Chicken Scallopini,120,3 oz,Vegan,-
+Lunch,VDub Chicken Caesar Wrap,600,1 wrap,-
+Lunch,VDub Jalapeno Ranch Mac And Cheese,350,1 cup,-
+Lunch,VDub Vegan Bbq Jackfruit,90,1/2 cup,Vegan,Vegetarian,-
+Lunch,VDub Basmati Rice Cooked,200,1 serving,Vegan,Halal, Gluten,-
+Lunch,VDub Spicy-sweet Roasted Yams,180,1 serving,-
+Lunch,VDub Turkey Burger,190,1 patty,-
+Lunch,VDub Gardein Blk Bean Patty,150,1 patty,Vegan,Vegetarian,-
+Lunch,VDub Salad,50,1 serving,Vegetarian, Gluten,Halal,Vegetarian,-
+Lunch,VDub Seasoned French Fries,360,1 serving,-
+Dinner,VDub Cheese Manicotti ,240,1 piece,-
+Dinner,VDub Creamy Pesto Pasta ,300,1 serving,-
+Dinner,VDub Basmati Rice Cooked,200,1 serving,Vegan,Halal, Gluten,Vegetarian,-
+Dinner,VDub Roasted Butternut Squash,80,1 cup,Vegan, Halal,-
+Dinner,VDub Vegan Vanilla Cake,250,1 slice,Vegan,Vegetarian,-
+Dinner,VDub Turkey Burger 4 Oz Butterball,190,1 patty,-
+Dinner,VDub Seasoned French Fries,360,1 serving,-
+Dinner,VDub Popcorn Shrimp,230,12 pieces,-
+Dinner,VDub Chipotle Chicken,180,1 serving,-
+

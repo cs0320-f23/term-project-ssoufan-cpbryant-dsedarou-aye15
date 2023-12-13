@@ -59,11 +59,17 @@ public class MenuHandler implements Route{
     Searcher searcher = new Searcher(this.filepath, value);
     List<List<String>> result = searcher.getNoHeaderResult();
 
+
+
     Searcher all = new Searcher(this.filepath,"-");
     List<List<String>> allResult = all.getNoHeaderResult();
 
+    if (value.isEmpty()){
+      return new SuccessResponse(allResult).serialize();
+    }
+
     List<List<String>> filteredItems = allResult.stream()
-        .filter(item -> !item.contains(value))
+        .filter(item -> item.contains(value))
         .collect(Collectors.toList());
 
     if (result.isEmpty()){

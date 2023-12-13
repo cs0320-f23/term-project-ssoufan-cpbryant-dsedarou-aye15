@@ -5,42 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f91046b6-4395-48f3-a8e1-fa847fb4a5d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MondayMenu.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TuesdayMenu.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WednesdayMenu.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/BroadbandData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/BroadbandData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/RealBBSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/RealBBSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/StateAndCounty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Broadband/StateAndCounty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CSVData$CSVRowCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CSVData$CSVRowCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CSVData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CSVData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Creator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Creator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CreatorFromRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/CreatorFromRow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Searcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/CSV/Searcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Exceptions/DatasourceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Exceptions/DatasourceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Exceptions/FactoryFailureException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Exceptions/FactoryFailureException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler$FailureResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler$SuccessResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/BroadbandHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler$FailureResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler$SuccessResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/LoadHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler$FailureResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler$SuccessResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/SearchHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler$FailureResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler$SuccessResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/ViewHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/menu.csv" beforeDir="false" />
     </list>
-    <list id="210401e8-d91f-4462-b29b-60207ac8d557" name="Changes by channingbryant" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Handlers/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Handlers/MenuHandler.java" afterDir="false" />
-    </list>
+    <list id="210401e8-d91f-4462-b29b-60207ac8d557" name="Changes by channingbryant" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,25 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main" />

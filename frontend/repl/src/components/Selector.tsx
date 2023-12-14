@@ -61,12 +61,6 @@ export function processSearchResult(
       Object.keys(parsedData).forEach((key) => {
         const item = parsedData[key];
         console.log("meals: " + item.Meal)
-        const itemInfo = {
-          item: item.Item,
-          calories: item.Calories,
-          portionSize: item["Serving size"],
-        };
-
         const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
 
 

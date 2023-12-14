@@ -22,14 +22,6 @@ export function searchCommandFunction(
       console.log(json);
       console.log(commandString);
       processSearchResult(commandString, json);
-      // if (json.result === "success") {
-      //   processSearchResult(commandString, json);
-      //   resolve(json);
-      // } else {
-      //   resolve(
-      //     "An error occurred while trying to search. The correct syntax is: search <keyword> <header/index>"
-      //   );
-      // }
     } catch (error) {
       resolve("An error occurred: " + error);
     }
@@ -74,6 +66,9 @@ export function processSearchResult(
           calories: item.Calories,
           portionSize: item["Serving size"],
         };
+
+        const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
+
 
         if (item.Meal.toLowerCase() === "breakfast") {
           breakfastArray.push(itemInfo);
@@ -171,7 +166,8 @@ export function processSearchResult(
       console.error("Parsed data is not an object.");
     }
   } catch (error) {
-    console.error("Error processing search result:", error);
+    console.log("No restrictions.");
+    // console.error("Error processing search result:", error);
   }
 }
 

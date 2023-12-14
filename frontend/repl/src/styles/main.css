@@ -67,6 +67,10 @@ body {
   margin-top: 50px;
 }
 
+.generate{
+  margin-left: 415px;
+}
+
 .radio-label {
   position: relative;
   display: inline-block;

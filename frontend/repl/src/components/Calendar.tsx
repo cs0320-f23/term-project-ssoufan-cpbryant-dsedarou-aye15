@@ -62,7 +62,7 @@ interface CalendarProps {
 //   );
 // };
 
-const CalendarTable: React.FC<CalendarProps> = ({ mealPlan, removeMeal }) => {
+const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal }) => {
   return (
     <div className="meal-table">
       <table>

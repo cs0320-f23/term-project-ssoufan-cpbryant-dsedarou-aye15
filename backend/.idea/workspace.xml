@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f91046b6-4395-48f3-a8e1-fa847fb4a5d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/TuesdayMenu.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WednesdayMenu.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Handlers/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Handlers/MenuHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/brown/cs/student/MenuMockTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/brown/cs/student/MenuMockTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" afterDir="false" />
     </list>
     <list id="210401e8-d91f-4462-b29b-60207ac8d557" name="Changes by channingbryant" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MenuMockTesting.testNoAreaParameter">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.main.Main" />
       <module name="s0" />
@@ -74,37 +79,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuMockTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="s0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.brown.cs.student.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
-      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuMockTesting.testInvalidQueryInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="s0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.brown.cs.student.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
-      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="METHOD_NAME" value="testInvalidQueryInput" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuMockTesting.testValidEggsSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MenuMockTesting.testValidGlutenSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="s0" />
       <extension name="coverage">
         <pattern>
@@ -135,13 +109,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="METHOD_NAME" value="testValidEggsSearch" />
+      <option name="METHOD_NAME" value="testValidGlutenSearch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuMockTesting.testValidNoRestrictionSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MenuMockTesting.testValidHalalSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="s0" />
       <extension name="coverage">
         <pattern>
@@ -151,7 +125,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="METHOD_NAME" value="testValidNoRestrictionSearch" />
+      <option name="METHOD_NAME" value="testValidHalalSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuMockTesting.testValidVeganSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="s0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.brown.cs.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
+      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
+      <option name="METHOD_NAME" value="testValidVeganSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuMockTesting.testValidVegetarianSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="s0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.brown.cs.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
+      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
+      <option name="METHOD_NAME" value="testValidVegetarianSearch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MenuMockTesting" />
-        <item itemvalue="JUnit.MenuMockTesting.testValidNoRestrictionSearch" />
         <item itemvalue="JUnit.MenuMockTesting.testNoAreaParameter" />
-        <item itemvalue="JUnit.MenuMockTesting.testInvalidQueryInput" />
-        <item itemvalue="JUnit.MenuMockTesting.testValidEggsSearch" />
+        <item itemvalue="JUnit.MenuMockTesting.testValidVegetarianSearch" />
+        <item itemvalue="JUnit.MenuMockTesting.testValidHalalSearch" />
+        <item itemvalue="JUnit.MenuMockTesting.testValidGlutenSearch" />
+        <item itemvalue="JUnit.MenuMockTesting.testValidVeganSearch" />
       </list>
     </recent_temporary>
   </component>

@@ -55,10 +55,13 @@ public class MenuHandler implements Route{
       return new FailureResponse(failure).serialize();
     }
 
+    if(!request.toString().equals("restriction")){
+      return new FailureResponse(failure).serialize();
+    }
+
     String value = request.queryParams("restriction");
     Searcher searcher = new Searcher(this.filepath, value);
     List<List<String>> result = searcher.getNoHeaderResult();
-
 
 
     Searcher all = new Searcher(this.filepath,"-");
@@ -138,7 +141,7 @@ public class MenuHandler implements Route{
       Map<String, Object> responseMap = new HashMap<>();
       responseMap.put("result", "failure");
       responseMap.put("error_description", "Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
-          + "Alcohol, Soy, Shellfish, Gluten, Wheat, Eggs, Milk, or leave it empty for no restriction]");
+          + "Vegan, Vegetarian, Halal, Gluten or leave it empty for no restriction]");
       return adapter.toJson(responseMap);
     }
   }

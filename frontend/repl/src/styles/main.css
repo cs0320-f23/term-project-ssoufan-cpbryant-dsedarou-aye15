@@ -7,6 +7,8 @@
 .Display {
   position: relative;
   min-height: 100vh;
+  font-family: "font";
+
 }
 
 .limit {
@@ -18,6 +20,7 @@
   margin: auto;
   display: block;
   overflow: scroll;
+  font-family: "font";
 }
 
 .Input {
@@ -26,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "font";
 }
 
 fieldset {
@@ -90,14 +94,16 @@ body {
 }
 
 .calendar {
-  margin-top: 20px;
-  display: flex;
+  margin-top: 40px;
+  margin-bottom: 20px;
   justify-content: center;
+  display: block;
   align-items: center;
+  font-family: "font";
 }
 
 table {
-  width: 95%;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -107,6 +113,7 @@ td {
   padding: 8px;
   text-align: center;
   color: white;
+  font-family: "font";
 }
 
 #col1 {
@@ -128,10 +135,12 @@ th {
 button {
   margin-left: 5px;
   cursor: pointer;
+  font-family: "font";
 }
 
 input[type="radio"]:checked + .radio-label:before {
   background-color: #543b1f; /* Color when selected */
+    font-family: "font";
 }
 
 label {

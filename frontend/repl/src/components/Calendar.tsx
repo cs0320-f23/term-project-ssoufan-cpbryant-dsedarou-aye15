@@ -64,7 +64,7 @@ interface CalendarProps {
 
 const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal }) => {
   return (
-    <div className="meal-table">
+    <div className="calendar">
       <table>
         <thead>
           <tr>

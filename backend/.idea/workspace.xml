@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f91046b6-4395-48f3-a8e1-fa847fb4a5d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/brown/cs/student/RealTesting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$FailureResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler$SuccessResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Handlers/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/brown/cs/student/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/repl/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/repl/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/repl/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/repl/src/styles/main.css" afterDir="false" />
     </list>
     <list id="210401e8-d91f-4462-b29b-60207ac8d557" name="Changes by channingbryant" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +69,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RealTesting.testValidHalalSearch">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.main.Main" />
       <module name="s0" />

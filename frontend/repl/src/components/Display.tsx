@@ -4,7 +4,7 @@ import { History } from "./History";
 import { Input } from "./Input";
 import Calendar from "./Calendar";
 import React from "react";
-import { Selector } from "./Selector";
+import { Selector, searchCommandFunction } from "./Selector";
 import { CommunityHistory } from "./CommnityHistory";
 import { CommunityInput } from "./CommunityInput";
 import { Generate } from "./Generate";
@@ -41,7 +41,10 @@ export default function Display() {
   const handleSelect = async (selectedOption: string) => {
     // console.log("Selected option:", selectedOption);
     setCommandString(selectedOption); // Set the commandString when an option is selected
-    setSelectedItems(itemsProp); // Update selected items
+    // Remove this line: setSelectedItems(itemsProp);
+  
+    // Call the searchCommandFunction and update items directly
+    const result = await searchCommandFunction(selectedOption, commandString, setSelectedItems);
 
     // const result = await searchCommandFunction(selectedOption);
   };
@@ -59,7 +62,7 @@ export default function Display() {
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
       <Generate />
-      <Calendar mealPlan={mealPlan} removeMeal={removeMeal} itemsProp={itemsProp} />
+<Calendar mealPlan={mealPlan} removeMeal={removeMeal} itemsProp={itemsProp} />
       <div className="repl">
         <hr></hr>
         <p className="App-header">

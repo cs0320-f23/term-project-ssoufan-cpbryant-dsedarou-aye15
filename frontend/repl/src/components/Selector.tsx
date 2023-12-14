@@ -176,14 +176,14 @@ export function Selector(props: SelectorProps) {
 
   useEffect(() => {
     // This will log the commandString whenever it changes
-    console.log("Command String:", props.commandString);
-    console.log("Items prop", itemsProp);
+    // console.log("Command String:", props.commandString);
+    // console.log("Items prop", itemsProp);
 
   }, [props.commandString, itemsProp ]);
 
   const handleOptionChange = async (selectedValue: string) => {
     setSelectedOption(selectedValue);
-    props.onSelect(selectedValue, itemsProp);
+    props.onSelect(selectedValue, itemsProp); // Pass the updated itemsProp here
     console.log("items prop:" , itemsProp)
     const result = await searchCommandFunction(
       selectedValue,

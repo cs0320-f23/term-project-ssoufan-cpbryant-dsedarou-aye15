@@ -20,6 +20,14 @@ export function searchCommandFunction(selectedOption: string, commandString: str
       console.log(json);
       console.log(commandString);
       processSearchResult(commandString, json);
+      // if (json.result === "success") {
+      //   processSearchResult(commandString, json);
+      //   resolve(json);
+      // } else {
+      //   resolve(
+      //     "An error occurred while trying to search. The correct syntax is: search <keyword> <header/index>"
+      //   );
+      // }
     } catch (error) {
       resolve("An error occurred: " + error);
     }
@@ -42,7 +50,6 @@ export function processSearchResult(commandString: string, searchData: string | 
 
       Object.keys(parsedData).forEach((key) => {
         const item = parsedData[key];
-        console.log("meals: " + item.Meal)
         const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
 
         if (item.Meal.toLowerCase() === 'breakfast') {
@@ -113,12 +120,11 @@ export function processSearchResult(commandString: string, searchData: string | 
       console.error('Parsed data is not an object.');
     }
   } catch (error) {
-    console.log("No restrictions.");
-    // console.error("Error processing search result:", error);
+    console.error("Error processing search result:", error);
   }
 }
 
-export function Selector(props: SelectorProps) {
+export function Generate(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
 
   // useEffect(() => {
@@ -136,71 +142,7 @@ export function Selector(props: SelectorProps) {
 
   return (
     <div>
-      <p className="restriction">Select an allergy:</p>
-      <div className="radio-container">
-        <input
-          type="radio"
-          id="Eggs"
-          name="restrictions"
-          value="Eggs"
-          onChange={() => handleOptionChange("Eggs")}
-        />
-        <label htmlFor="Eggs">Eggs</label>
-
-        <input
-          type="radio"
-          id="Soy"
-          name="restrictions"
-          value="Soy"
-          onChange={() => handleOptionChange("Soy")}
-        />
-        <label htmlFor="Soy">Soy</label>
-
-        <input
-          type="radio"
-          id="Milk"
-          name="restrictions"
-          value="Milk"
-          onChange={() => handleOptionChange("Milk")}
-        />
-        <label htmlFor="Milk">Milk</label>
-
-        <input
-          type="radio"
-          id="Wheat"
-          name="restrictions"
-          value="Wheat"
-          onChange={() => handleOptionChange("Wheat")}
-        />
-        <label htmlFor="Wheat">Wheat</label>
-
-        <input
-          type="radio"
-          id="Gluten"
-          name="restrictions"
-          value="Gluten"
-          onChange={() => handleOptionChange("Gluten")}
-        />
-        <label htmlFor="Gluten">Gluten</label>
-
-        <input
-          type="radio"
-          id="Alcohol"
-          name="restrictions"
-          value="Alcohol"
-          onChange={() => handleOptionChange("Alcohol")}
-        />
-        <label htmlFor="Alcohol">Alcohol</label>
-
-        <input
-          type="radio"
-          id="Shellfish"
-          name="restrictions"
-          value="Shellfish"
-          onChange={() => handleOptionChange("Shellfish")}
-        />
-        <label htmlFor="Shellfish">Shellfish</label>
-      </div>
+      <button className="generate">Generate</button>
     </div>
   );
 }

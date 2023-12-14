@@ -7,6 +7,7 @@ import React from "react";
 import { Selector } from "./Selector";
 import { CommunityHistory } from "./CommnityHistory";
 import { CommunityInput } from "./CommunityInput";
+import { Generate } from "./Generate";
 
 /**
  * The main component.
@@ -46,9 +47,16 @@ export default function Display() {
       {/* <History history={history} />
       <hr></hr> */}
       <p className="limit">Enter your daily calorie limit:</p>
-      <Input history={history} setHistory={setHistory} setCommandString={setCommandString} />
+      <Input
+        history={history}
+        setHistory={setHistory}
+        setCommandString={setCommandString}
+      />
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
+      <Generate onSelect={function (selectedOption: string): void {
+        throw new Error("Function not implemented.");
+      } } commandString={""} />
       <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
       <div className="repl">
         <hr></hr>

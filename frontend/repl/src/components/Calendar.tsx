@@ -3,7 +3,7 @@ import React from "react";
 interface CalendarProps {
   mealPlan: string[];
   removeMeal: (index: number) => void;
-  selectedItems: any[];
+  itemsProp: any[];
 }
 
 // const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal }) => {
@@ -63,8 +63,8 @@ interface CalendarProps {
 //   );
 // };
 
-const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal, selectedItems }) => {
-  console.log("Calendar Items:", selectedItems);
+const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal, itemsProp }) => {
+  console.log("Calendar Items:", itemsProp);
 
   return (
     <div className="calendar">

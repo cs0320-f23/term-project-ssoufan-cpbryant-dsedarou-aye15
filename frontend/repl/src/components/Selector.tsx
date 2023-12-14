@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/main.css";
 interface SelectorProps {
-  onSelect: (selectedOption: string) => void;
+  onSelect: (selectedOption: string, selectedItems: any[]) => void;
   commandString: string; // Add commandString prop
 }
 
@@ -11,7 +11,9 @@ export interface SelectorFunction {
 
 export function searchCommandFunction(
   selectedOption: string,
-  commandString: string
+  commandString: string,
+  setItems: React.Dispatch<React.SetStateAction<any[]>> // Add setItems function to update state
+
 ): Promise<string> {
   return new Promise(async (resolve) => {
     try {
@@ -19,9 +21,9 @@ export function searchCommandFunction(
         `http://localhost:2023/menu?restriction=` + selectedOption
       );
       const json = await response.json();
-      console.log(json);
-      console.log(commandString);
-      processSearchResult(commandString, json);
+      // console.log(json);
+      // console.log(commandString);
+      processSearchResult(commandString, json, setItems);
     } catch (error) {
       resolve("An error occurred: " + error);
     }
@@ -30,11 +32,12 @@ export function searchCommandFunction(
 
 export function processSearchResult(
   commandString: string,
-  searchData: string | object
+  searchData: string | object,
+  setItems: React.Dispatch<React.SetStateAction<any[]>>
 ): void {
   try {
     const calories = parseInt(commandString);
-    console.log("Command String:", calories);
+    // console.log("Command String:", calories);
 
     // Check if the searchData is already an object
     const parsedData =
@@ -60,13 +63,13 @@ export function processSearchResult(
 
       Object.keys(parsedData).forEach((key) => {
         const item = parsedData[key];
-        console.log("meals: " + item.Meal)
+        // console.log("meals: " + item.Meal)
         const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
 
 
         if (item.Meal.toLowerCase() === "breakfast") {
           breakfastArray.push(itemInfo);
-          console.log("breakfast: " + breakfastArray)
+          // console.log("breakfast: " + breakfastArray)
         } else if (item.Meal.toLowerCase() === "lunch") {
           lunchArray.push(itemInfo);
         } else if (item.Meal.toLowerCase() === "dinner") {
@@ -156,29 +159,36 @@ export function processSearchResult(
 
       // Log the selected items
       console.log("Selected Items:", selectedItems);
+      setItems(selectedItems); // Update state with selectedItems
     } else {
       console.error("Parsed data is not an object.");
     }
   } catch (error) {
-    console.log("No restrictions.");
+    // console.log("No restrictions.");
     // console.error("Error processing search result:", error);
   }
 }
 
 export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
+  const [itemsProp, setItems] = useState<any[]>([]); // State to store selected items
 
-  // useEffect(() => {
-  //   // This will log the commandString whenever it changes
-  //   console.log("Command String:", props.commandString);
-  // }, [props.commandString]);
+
+  useEffect(() => {
+    // This will log the commandString whenever it changes
+    console.log("Command String:", props.commandString);
+    console.log("Items prop", itemsProp);
+
+  }, [props.commandString, itemsProp ]);
 
   const handleOptionChange = async (selectedValue: string) => {
     setSelectedOption(selectedValue);
-    props.onSelect(selectedValue);
+    props.onSelect(selectedValue, itemsProp);
+    console.log("items prop:" , itemsProp)
     const result = await searchCommandFunction(
       selectedValue,
-      props.commandString
+      props.commandString,
+      setItems
     );
     // Use the result as needed
   };

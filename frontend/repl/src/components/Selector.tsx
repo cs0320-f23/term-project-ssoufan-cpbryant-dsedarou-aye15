@@ -16,7 +16,7 @@ export function searchCommandFunction(
   return new Promise(async (resolve) => {
     try {
       const response = await fetch(
-        `http://localhost:2025/menu?restriction=` + selectedOption
+        `http://localhost:2023/menu?restriction=` + selectedOption
       );
       const json = await response.json();
       console.log(json);

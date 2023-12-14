@@ -1,0 +1,92 @@
+Meal,Item,Calories,Serving Size,Restriction
+Breakfast,Ratty Egg White Omlet,45,6oz,Vegetarian,-
+Breakfast,Ratty Fried Eggs,130,2 eggs,Vegetarian,-
+Breakfast,Ratty Scrambled Eggs,170,4oz,Vegetarian,-
+Breakfast,Ratty Hard Boiled Eggs,240,2 eggs,Vegan,Halal,Gluten,-
+Breakfast,Ratty Veggie Sausage Patty,160,2 patties,Vegetarian,-
+Breakfast,Ratty Edamame Beans,200,1 cup,-
+Breakfast,Ratty Apple Crisp French Toast Casserole,300,4oz,Vegetarian,-
+Breakfast,Ratty Chicken Tocino,150,4oz,Gluten,-
+Breakfast,Ratty Paprika Breakfast Sweet Potatoes,100,1 potato,Vegetarian,-
+Breakfast,Ratty Brown Rice,300,1 cup,Vegan,Gluten-free,Halal,-
+Breakfast,Ratty Grilled Summer Squash,50,4oz,Vegetarian,-
+Breakfast,Ratty Blueberry Bread,200,1 slice,-
+Breakfast,Ratty Apple Danish,250,1 danish,Vegan,-
+Breakfast,Ratty Steel Cut Oats,150,1 cup,Vegan,-
+Breakfast,Ratty Plain Yogurt,150,8oz,Vegan,Gluten,-
+Lunch,Ratty Cannellini Bean & Tomato Soup,200,1 cup,Vegan,-
+Lunch,Ratty Italian Sausage Soup W/tortellini,300,1 cup,-
+Lunch,Ratty Torpedo Roll,170,1 roll,Halal,-
+Lunch,Ratty Shaved Steak,120,4oz,Gluten,-
+Lunch,Ratty Tater Tots,200,4oz,-
+Lunch,Ratty Basmati Rice,250,1 cup,Halal,-
+Lunch,Ratty Beef Chili ,300,1 serving,Halal,-
+Lunch,Ratty Steamed Jasmine Rice,240,1 cup,Vegan,Gluten,Halal,-
+Lunch,Ratty Wild Mushrooms & Onions,100,1 cup,Gluten-free,Vegetarian,-
+Lunch,Ratty Hot Banana Pepper Rings,20,3oz,-
+Lunch,Ratty Cassandras Chewey Gingerbread,80,1 piece,-
+Lunch,Ratty Ridiculously Good Stout Brownies,240,1 brownie,Vegan,-
+Lunch,Ratty Italian Salad,200,1 serving,-
+Lunch,Ratty Crinkle-Cut Fries,360,3oz,-
+Lunch,Ratty Grilled Chicken,280,1 piece,Gluten,-
+Lunch,Ratty Saugy Hot Dog,170,1 piece,Gluten,-
+Lunch,Ratty Breaded Chickn Cutlet,250,1 piece,Vegan,-
+Lunch,Ratty Cheese Pizza,190,1 slice,Vegetarian,-
+Lunch,Ratty Hawaiian Pizza,260,1 slice,-
+Lunch,Ratty Pepperoni Pizza,260,1 slice,-
+Lunch,Ratty Rigatoni,280,8oz,-
+Lunch,Ratty Whole Wheat Penne,300,4oz,Vegan,-
+Dinner,Ratty Cannellini Bean & Tomato Soup,200,1 cup,Vegan,Vegetarian,-
+Dinner,Ratty Ham & Bean Soup,225,1 cup,-
+Dinner,Ratty BBQ Boneless Ribs,200,1 rib,Gluten,-
+Dinner,Ratty Steak Fries,400,4oz,-
+Dinner,Ratty Au Gratin Potatoes,150,4oz,Vegan,Vegetarian,-
+Dinner,Ratty Spicy Collard Greens With Bacon,200,1 cup,-
+Dinner,Ratty Mashed Red Bliss Potatoes,160,4oz,Halal,-
+Dinner,Ratty Steamed Corn Kernels,210,1 cup,Halal,-
+Dinner,Ratty Roast Turkey With Gravy,300,8oz,Halal,-
+Dinner,Ratty Brown Rice,300,1 cup,Vegan,Gluten,Halal,-
+Dinner,Ratty Marble Cake W/ Chocolate Frosting,350,1 piece,-
+Dinner,Ratty Spice Cupcake W/ Lemon Frosting,350,1 cupcake,-
+Dinner,Ratty Italian Salad,200,1 serving,-
+Dinner,Ratty Crinkle-Cut Fries,360,3oz,-
+Dinner,Ratty Grilled Chicken,280,1 piece,Gluten,-
+Dinner,Ratty Saugy Hot Dog,170,1 piece,Gluten,-
+Dinner,Ratty Breaded Chickn Cutlet,250,1 piece,Vegan,-
+Dinner,Ratty Cheese Pizza,190,1 slice,Vegetarian,-
+Dinner,Ratty Hawaiian Pizza,260,1 slice,-
+Dinner,Ratty Pepperoni Pizza,260,1 slice,-
+Dinner,Ratty Rigatoni,280,8oz,-
+Dinner,Ratty Whole Wheat Penne,300,4oz,Vegan,-
+Breakfast,Vdub Scrambled Eggs,180,2 eggs,Vegitarian, Halal, Gluten,-
+Breakfast,Vdub Veggie Sausage Pattie ,70,1 patty,Vegan, Halal,-
+Breakfast,Vdub Turkey Breakfast Sausage,80,2 sausages,-
+Breakfast,Vdub Tex Mex Tofu Scramble,200,1 cup,Vegan, Gluten,-
+Breakfast,Vdub Hard Boiled Eggs (w),140,2 eggs,Vegan,Halal,Gluten,-
+Breakfast,Vdub Pancakes,150,2 oz,-
+Breakfast,Vdub Vegan Paprika Breakfast Potatoes,150,1 serving ,Vegan, Halal,-
+Breakfast,Vdub Roasted Button Mushrooms,100,1 serving,Vegetarian,-
+Breakfast,Vdub Oatmeal,150,1 cup,Vegetarian,-
+Breakfast,Vdub Omelet,90,1 egg,Vegetarian,-
+Breakfast,Vdub Yogurt,150, 1 cup,Vegetarian, Halal,-
+Breakfast,Vdub Vegan Chocolate Banana Bread,350,2 pieces,Vegan,-
+Breakfast,Vdub Gingerbread Donut,150,1 donut,-
+Lunch,Vdub Chicken Broccoli Pasta Alfredo,700,1 serving,-
+Lunch,Vdub Cajun Spiced Tofu Cutlet,170,1 serving,Vegan,-
+Lunch,Vdub Baked Potato,200,1 potato,-
+Lunch,Vdub Basmati Rice Cooked,200,1 serving,Vegan,Halal, Gluten,-
+Lunch,Vdub Glazed Baby Carrots W/shallots,60,1 cup,Vegetarian,-
+Lunch,Vdub Green Beans W/ Roasted Tomato,40,1 cup,Vegetarian,-
+Lunch,Vdub Salad,50,1 serving ,Vegetarian, Gluten,-
+Lunch,Vdub Turkey Burger,250,1 patty,-
+Lunch,Vdub Seasoned French Fries ,360,1 serving,-
+Lunch,Vdub Vegan Falafel,100,2 falafels,Vegan, Halal,-
+Dinner,Vdub Jerk Cauliflower,100,1 cup,-
+Dinner,Vdub Pork Loin ,200,3 oz,-
+Dinner,Vdub Ropa Vieja,350,1 serving,-
+Dinner,Vdub Fried Plantain,150,3 plantains,-
+Dinner,Vdub Spicy-sweet Roasted Yams,100,1 cup,-
+Dinner ,Vdub Salad,50,1 serving ,Vegetarian, Gluten,-
+Dinner,Vdub Marble Cake W/ Chocolate Frosting,400,1 slice,-
+Dinner,Vdub Vegan Spice Cupcake,200,1 cupcake,Vegan,-
+Dinner,Vdub Seasoned French Fries ,360,1 serving,-

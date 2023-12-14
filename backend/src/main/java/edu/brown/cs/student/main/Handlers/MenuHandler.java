@@ -28,7 +28,7 @@ import java.util.List;
  */
 public class MenuHandler implements Route{
   private CSVData data;
-  private String filepath;
+  private final String filepath;
 
   public MenuHandler(String filepath) {
     this.filepath = filepath;
@@ -59,30 +59,24 @@ public class MenuHandler implements Route{
     Searcher searcher = new Searcher(this.filepath, value);
     List<List<String>> result = searcher.getNoHeaderResult();
 
-
-
     Searcher all = new Searcher(this.filepath,"-");
     List<List<String>> allResult = all.getNoHeaderResult();
 
-    if (value.isEmpty()){
-      return new SuccessResponse(allResult).serialize();
-    }
-
     List<List<String>> filteredItems = allResult.stream()
-        .filter(item -> item.contains(value))
+        .filter(item -> !item.contains(value))
         .collect(Collectors.toList());
 
     if (result.isEmpty()){
       return new FailureResponse(failure).serialize();
     }
-    return new SuccessResponse(filteredItems).serialize();
+    return new SuccessResponse(filteredItems, this.filepath).serialize();
   }
 
   /**
    * The `SuccessResponse` record represents a JSON response indicating a successful search operation
    * within CSV data. It includes methods for serializing the response as JSON.
    */
-  public record SuccessResponse(List<List<String>> data) {
+  public record SuccessResponse(List<List<String>> data, String filepath) {
     /**
      * Serializes the success response as JSON.
      *
@@ -98,7 +92,6 @@ public class MenuHandler implements Route{
         Map<String, Object> responseMap = new HashMap<>();
 //        responseMap.put("data", data);
 //        System.out.println(data);
-        responseMap.put("result", "success");
         for (int i = 0; i < data.size(); i++){
           Map<String, String> map = new HashMap<>();
           map.put("Meal", data.get(i).get(0));
@@ -106,8 +99,12 @@ public class MenuHandler implements Route{
           map.put("Calories", data.get(i).get(2));
           map.put("Serving size", data.get(i).get(3));
           responseMap.put("item: " + i, map);
+//          int menuIndex = filepath.indexOf("Menu");
+//          int lastSlashIndex = filepath.lastIndexOf("/", menuIndex);
+//          String dayOfWeek = filepath.substring(lastSlashIndex + 1, menuIndex);
+//          responseMap.put("day: ", dayOfWeek);
         }
-        System.out.println(responseMap);
+//        System.out.println(responseMap);
 //        responseMap.put("result", "success");
         return adapter.toJson(responseMap);
 //        return adapter.toJson(this);
@@ -137,8 +134,6 @@ public class MenuHandler implements Route{
       JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
       Map<String, Object> responseMap = new HashMap<>();
       responseMap.put("result", "failure");
-      responseMap.put("error_description", "Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
-          + "Alcohol, Soy, Shellfish, Gluten, Wheat, Eggs, Milk, or leave it empty for no restriction]");
       return adapter.toJson(responseMap);
     }
   }

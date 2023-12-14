@@ -27,13 +27,17 @@ export function Generate() {
   };
 
   return (
-    <div>
-      <button className="generate" onClick={handleGenerateClick}>
-        Generate
-      </button>
-      {generatedData && (
-        <p>Menu Day: {generatedData}</p>
-      )}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 30,
+      }}
+    >
+      <button className="generate" onClick={handleGenerateClick}>Generate</button>
+      {generatedData && <p>Menu Day: {generatedData}</p>}
     </div>
   );
 }

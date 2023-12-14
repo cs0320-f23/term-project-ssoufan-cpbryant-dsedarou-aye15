@@ -54,9 +54,7 @@ export default function Display() {
       />
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
-      <Generate onSelect={function (selectedOption: string): void {
-        throw new Error("Function not implemented.");
-      } } commandString={""} />
+      <Generate />
       <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
       <div className="repl">
         <hr></hr>

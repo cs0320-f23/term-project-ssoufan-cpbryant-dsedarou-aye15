@@ -23,6 +23,8 @@ export default function Display() {
   const [mealPlan, setMealPlan] = useState<string[]>([]);
   const [communityHistory, setCommunityHistory] = useState<string[]>([]);
   const [commandString, setCommandString] = useState<string>(""); // Initialize commandString state
+  const [itemsProp, setSelectedItems] = useState<any[]>([]); // New state for selected items
+
 
   // Function to add a meal to the meal plan
   const addMeal = (meal: string) => {
@@ -39,6 +41,8 @@ export default function Display() {
   const handleSelect = async (selectedOption: string) => {
     // console.log("Selected option:", selectedOption);
     setCommandString(selectedOption); // Set the commandString when an option is selected
+    setSelectedItems(itemsProp); // Update selected items
+
     // const result = await searchCommandFunction(selectedOption);
   };
 
@@ -55,7 +59,7 @@ export default function Display() {
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
       <Generate />
-      <Calendar mealPlan={mealPlan} removeMeal={removeMeal} />
+      <Calendar mealPlan={mealPlan} removeMeal={removeMeal} itemsProp={itemsProp} />
       <div className="repl">
         <hr></hr>
         <p className="App-header">

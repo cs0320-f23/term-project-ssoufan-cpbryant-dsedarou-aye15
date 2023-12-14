@@ -276,6 +276,15 @@ export function Selector(props: SelectorProps) {
           onChange={() => handleOptionChange("Halal")}
         />
         <label htmlFor="Hala">Halal</label>
+
+        <input
+          type="radio"
+          id="None"
+          name="restrictions"
+          value="None"
+          onChange={() => handleOptionChange("None")}
+        />
+        <label htmlFor="None">None</label>
       </div>
     </div>
   );

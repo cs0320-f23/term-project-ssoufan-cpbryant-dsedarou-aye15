@@ -67,7 +67,7 @@ public class MenuHandler implements Route{
         .collect(Collectors.toList());
 
     if (result.isEmpty()){
-      return new FailureResponse(failure).serialize();
+      return new SuccessResponse(allResult, this.filepath).serialize();
     }
     return new SuccessResponse(filteredItems, this.filepath).serialize();
   }

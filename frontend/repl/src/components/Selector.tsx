@@ -249,6 +249,33 @@ export function Selector(props: SelectorProps) {
           onChange={() => handleOptionChange("Shellfish")}
         />
         <label htmlFor="Shellfish">Shellfish</label>
+
+        <input
+          type="radio"
+          id="Vegetarian"
+          name="restrictions"
+          value="Vegetarian"
+          onChange={() => handleOptionChange("Vegetarian")}
+        />
+        <label htmlFor="Vegetarian">Vegetarian</label>
+
+        <input
+          type="radio"
+          id="Vegan"
+          name="restrictions"
+          value="Vegan"
+          onChange={() => handleOptionChange("Vegan")}
+        />
+        <label htmlFor="Vegan">Vegan</label>
+
+        <input
+          type="radio"
+          id="Halal"
+          name="restrictions"
+          value="Halal"
+          onChange={() => handleOptionChange("Halal")}
+        />
+        <label htmlFor="Hala">Halal</label>
       </div>
     </div>
   );

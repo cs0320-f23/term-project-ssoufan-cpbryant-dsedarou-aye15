@@ -29,6 +29,8 @@ export function CommunityHistory(props: CommunityHistoryProps) {
       aria-a
       aria-label="Past commands"
     >
+      <p>The Ratty food was so good!</p>
+      <p>Do not go to the Vdub, the icecream machine is broken :/</p>
       {props.history.map((command, index) => (
         <p>{command}</p>
       ))}

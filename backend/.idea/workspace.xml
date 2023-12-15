@@ -64,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.RealTesting.PropertyBasedTest">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.main.Main" />
       <module name="s0" />
@@ -90,6 +90,21 @@
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
       <option name="METHOD_NAME" value="testValidEggsSearch" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="s0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.brown.cs.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
+      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.RealTesting" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,29 +157,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RealTesting.testValidHalalSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="s0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.brown.cs.student.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
-      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.RealTesting" />
-      <option name="METHOD_NAME" value="testValidHalalSearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RealTesting.PropertyBasedTestSameResultFromSameInput" />
         <item itemvalue="JUnit.RealTesting.PropertyBasedTest" />
+        <item itemvalue="JUnit.RealTesting" />
+        <item itemvalue="JUnit.RealTesting.PropertyBasedTestSameResultFromSameInput" />
         <item itemvalue="JUnit.RealTesting.FuzzTest" />
         <item itemvalue="JUnit.MenuMockTesting.testValidEggsSearch" />
-        <item itemvalue="JUnit.RealTesting.testValidHalalSearch" />
       </list>
     </recent_temporary>
   </component>

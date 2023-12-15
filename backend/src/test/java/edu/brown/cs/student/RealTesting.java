@@ -11,6 +11,7 @@ import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import okio.Buffer;
@@ -34,7 +35,7 @@ public class RealTesting {
 
   @BeforeEach
   public void setup() {
-    Spark.get("menu", new MenuHandler("/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/src/main/java/MondayMenu.csv"));
+    Spark.get("menu", new MenuHandler("/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/data/MondayMenu.csv"));
     Spark.init();
     Spark.awaitInitialization();
 
@@ -84,5 +85,92 @@ public class RealTesting {
     assertEquals("",
         body.toString());
   }
+
+  @Test
+  public void testValidVeganSearch() throws IOException {
+    HttpURLConnection loadConnection = tryRequest("menu?restriction=Halal");
+    Map<String, Object> body =
+        adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+    assertEquals(200, loadConnection.getResponseCode());
+    assertEquals("success", body.get("result"));
+    body.remove("result");
+    assertEquals("",
+        body.toString());
+  }
+
+  @Test
+  public void testValidVegetarianSearch() throws IOException {
+    HttpURLConnection loadConnection = tryRequest("menu?restriction=Halal");
+    Map<String, Object> body =
+        adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+    assertEquals(200, loadConnection.getResponseCode());
+    assertEquals("success", body.get("result"));
+    body.remove("result");
+    assertEquals("",
+        body.toString());
+  }
+
+  @Test
+  public void testValidGlutenSearch() throws IOException {
+    HttpURLConnection loadConnection = tryRequest("menu?restriction=Halal");
+    Map<String, Object> body =
+        adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+    assertEquals(200, loadConnection.getResponseCode());
+    assertEquals("success", body.get("result"));
+    body.remove("result");
+    assertEquals("",
+        body.toString());
+  }
+
+  public static String getRandomRestriction() {
+    Random random = new Random();
+    int randomNumber = random.nextInt(5); // Generates a random number between 0 and 4
+
+    String restriction;
+    switch (randomNumber) {
+      case 0:
+        restriction = "menu?restriction=Halal";
+        break;
+      case 1:
+        restriction = "menu?restriction=Vegan";
+        break;
+      case 2:
+        restriction = "menu?restriction=Vegetarian";
+        break;
+      case 3:
+        restriction = "menu?restriction=Gluten";
+        break;
+      default:
+        String randomString = generateRandomString(3 + random.nextInt(8)); // Generates a random string of length 3-10
+        restriction = "menu?restriction=" + randomString;
+        break;
+    }
+    return restriction;
+  }
+
+  public static String generateRandomString(int length) {
+    String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    Random random = new Random();
+    StringBuilder sb = new StringBuilder(length);
+    for (int i = 0; i < length; i++) {
+      int index = random.nextInt(characters.length());
+      sb.append(characters.charAt(index));
+    }
+    return sb.toString();
+  }
+
+  @Test
+  public void FuzzTest() throws IOException {
+    for(int i = 0;i<20;i++) {
+      String call = getRandomRestriction();
+      HttpURLConnection loadConnection = tryRequest(call);
+      Map<String, Object> body =
+          adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+      assertEquals(200, loadConnection.getResponseCode());
+      System.out.println(body.toString());
+    }
+
+  }
+
 
 }

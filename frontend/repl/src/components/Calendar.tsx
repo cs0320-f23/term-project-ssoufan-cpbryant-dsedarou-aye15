@@ -5,67 +5,15 @@ interface CalendarProps {
   removeMeal: (index: number) => void;
   itemsProp: any[];
 }
+const Calendar: React.FC<CalendarProps> = ({ mealPlan, itemsProp }) => {
+  console.log("Calendar Items Length:", itemsProp.length);
 
-// const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal }) => {
-//   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  if (itemsProp.length === 0) {
+    // Render a message or default content when itemsProp is empty
+    return <p>No items available</p>;
+  }
 
-//   return (
-//     <div className="calendar">
-//       <table>
-//         <thead>
-//           <tr>
-//             <th>Time</th>
-//             {daysOfWeek.map((day) => (
-//               <th key={day}>{day}</th>
-//             ))}
-//           </tr>
-//         </thead>
-//         <tbody>
-//           <tr>
-//             <td id="col1">Breakfast</td>
-//             {daysOfWeek.map((day, index) => (
-//               <td key={index}>
-//                 <MealSlot
-//                   day={day}
-//                   mealPlan={mealPlan}
-//                   removeMeal={removeMeal}
-//                 />
-//               </td>
-//             ))}
-//           </tr>
-//           <tr>
-//             <td id="col2">Lunch</td>
-//             {daysOfWeek.map((day, index) => (
-//               <td key={index + daysOfWeek.length}>
-//                 <MealSlot
-//                   day={day}
-//                   mealPlan={mealPlan}
-//                   removeMeal={removeMeal}
-//                 />
-//               </td>
-//             ))}
-//           </tr>
-//           <tr>
-//             <td id="col3">Dinner</td>
-//             {daysOfWeek.map((day, index) => (
-//               <td key={index + 2 * daysOfWeek.length}>
-//                 <MealSlot
-//                   day={day}
-//                   mealPlan={mealPlan}
-//                   removeMeal={removeMeal}
-//                 />
-//               </td>
-//             ))}
-//           </tr>
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
-
-const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal, itemsProp }) => {
-  console.log("Calendar Items:", itemsProp);
-
+  // Continue with the rest of the rendering logic
   return (
     <div className="calendar">
       <table>
@@ -79,19 +27,40 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal, itemsProp }) 
           <tr>
             <td id="col1">Breakfast</td>
             <td>
-              <MealSlot day="Breakfast" mealPlan={mealPlan} removeMeal={removeMeal} />
+              {itemsProp
+                .filter((item) => item.meal === "breakfast")
+                .map((item, index) => (
+                  <div key={index}>
+                    {item.item} - {item.calories} calories
+                    {/* You can include additional details if needed */}
+                  </div>
+                ))}
             </td>
           </tr>
           <tr>
             <td id="col2">Lunch</td>
             <td>
-              <MealSlot day="Lunch" mealPlan={mealPlan} removeMeal={removeMeal} />
+              {itemsProp
+                .filter((item) => item.meal === "lunch")
+                .map((item, index) => (
+                  <div key={index}>
+                    {item.item} - {item.calories} calories
+                    {/* You can include additional details if needed */}
+                  </div>
+                ))}
             </td>
           </tr>
           <tr>
             <td id="col3">Dinner</td>
             <td>
-              <MealSlot day="Dinner" mealPlan={mealPlan} removeMeal={removeMeal} />
+              {itemsProp
+                .filter((item) => item.meal === "dinner")
+                .map((item, index) => (
+                  <div key={index}>
+                    {item.item} - {item.calories} calories
+                    {/* You can include additional details if needed */}
+                  </div>
+                ))}
             </td>
           </tr>
         </tbody>
@@ -99,6 +68,9 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, removeMeal, itemsProp }) 
     </div>
   );
 };
+
+
+
 
 
 interface MealSlotProps {

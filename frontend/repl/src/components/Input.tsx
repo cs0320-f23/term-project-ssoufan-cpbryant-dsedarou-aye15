@@ -15,6 +15,7 @@ export function Input(props: InputProps) {
     // Log the input for calories when submitting the form
     // console.log("Input for calories:", commandString);
     props.setCommandString(commandString);
+    
 
     // Here, you can perform any further actions related to crafting the meal plan
   };

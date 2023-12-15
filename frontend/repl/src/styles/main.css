@@ -8,7 +8,6 @@
   position: relative;
   min-height: 100vh;
   font-family: "font";
-
 }
 
 .limit {
@@ -71,7 +70,7 @@ body {
   margin-top: 50px;
 }
 
-.generate{
+.generate {
   margin-bottom: 30px;
 }
 
@@ -140,7 +139,7 @@ button {
 
 input[type="radio"]:checked + .radio-label:before {
   background-color: #543b1f; /* Color when selected */
-    font-family: "font";
+  font-family: "font";
 }
 
 label {
@@ -186,7 +185,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e3d3bc
+  background-color: #e3d3bc;
 }
 
 .centered-button {
@@ -195,4 +194,16 @@ label {
   /* margin-top: 0px; */
   /* margin-bottom: 100px; */
   cursor: pointer;
+}
+
+#MenuButtonDiv {
+  left: 50%;
+  bottom: 20%;
+}
+
+#MenuButton {
+  background-color: #543b1f;
+  width: 200px;
+  height: 100px;
+  transform: translate(310%, -30%);
 }

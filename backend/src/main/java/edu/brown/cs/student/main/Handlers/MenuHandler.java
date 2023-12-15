@@ -51,26 +51,47 @@ public class MenuHandler implements Route{
 //    this.filepath = data.getFilePath();
     HashMap<String, Object> failure = new HashMap<>();
 
+
     if (this.filepath == null || this.filepath.isEmpty()) {
       return new FailureResponse(failure).serialize();
     }
+
+
+    if(!request.queryParams().toString().equals("[restriction]")){
+      return new FailureResponse(failure).serialize();
+    }
+
 
     String value = request.queryParams("restriction");
     Searcher searcher = new Searcher(this.filepath, value);
     List<List<String>> result = searcher.getNoHeaderResult();
 
+
+    if (!result.toString().contains(value)){
+      return new FailureResponse(failure).serialize();
+    }
+
+
     Searcher all = new Searcher(this.filepath,"-");
     List<List<String>> allResult = all.getNoHeaderResult();
 
+
+    if (value.isEmpty()){
+      return new SuccessResponse(allResult, this.filepath).serialize();
+    }
+
+
     List<List<String>> filteredItems = allResult.stream()
-        .filter(item -> !item.contains(value))
+        .filter(item -> item.contains(value))
         .collect(Collectors.toList());
+
 
     if (result.isEmpty()){
       return new SuccessResponse(allResult, this.filepath).serialize();
     }
     return new SuccessResponse(filteredItems, this.filepath).serialize();
   }
+
 
   /**
    * The `SuccessResponse` record represents a JSON response indicating a successful search operation

@@ -19,6 +19,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 import spark.Spark;
 
 public class RealTesting {
@@ -35,7 +36,8 @@ public class RealTesting {
 
   @BeforeEach
   public void setup() {
-    Spark.get("menu", new MenuHandler("/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/data/MondayMenu.csv"));
+    Spark.get("menu", new MenuHandler(
+        "/Users/shadisoufan/Desktop/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/data/MondayMenu.csv"));
     Spark.init();
     Spark.awaitInitialization();
 
@@ -52,6 +54,7 @@ public class RealTesting {
 
   /**
    * Use this to build the URL connection without sending the request in
+   *
    * @param apiCall- The queries we would like to input for our search
    * @return the connection after searching
    * @throws IOException - Error with any connectivity
@@ -71,6 +74,7 @@ public class RealTesting {
 
   /**
    * This method tests if the area query parameter is not inputted
+   *
    * @throws IOException
    */
 
@@ -141,7 +145,8 @@ public class RealTesting {
         restriction = "menu?restriction=Gluten";
         break;
       default:
-        String randomString = generateRandomString(3 + random.nextInt(8)); // Generates a random string of length 3-10
+        String randomString = generateRandomString(
+            3 + random.nextInt(8)); // Generates a random string of length 3-10
         restriction = "menu?restriction=" + randomString;
         break;
     }
@@ -159,9 +164,14 @@ public class RealTesting {
     return sb.toString();
   }
 
+  private Boolean isValid(String result) {
+    return result != null && result.contains("Breakfast") && result.contains("Lunch") &&
+        result.contains("Dinner");
+  }
+
   @Test
   public void FuzzTest() throws IOException {
-    for(int i = 0;i<20;i++) {
+    for (int i = 0; i < 20; i++) {
       String call = getRandomRestriction();
       HttpURLConnection loadConnection = tryRequest(call);
       Map<String, Object> body =
@@ -169,8 +179,31 @@ public class RealTesting {
       assertEquals(200, loadConnection.getResponseCode());
       System.out.println(body.toString());
     }
-
   }
 
+  @Test
+  public void PropertyBasedTest() throws IOException {
+    for (int i = 0; i < 20; i++) {
+      String call = getRandomRestriction();
+      HttpURLConnection loadConnection = tryRequest(call);
+      Map<String, Object> body =
+          adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+      assertEquals(200, loadConnection.getResponseCode());
+      //System.out.println(body.toString());
+      Assert.assertTrue(isValid(body.toString()));
+    }
+  }
 
+  @Test
+  public void PropertyBasedTestSameResultFromSameInput() throws IOException {
+    String res = "{item: 41={Item=VDub Vegan Buffalo Chicken Scallopini, Serving size=3 oz, Meal=Lunch, Calories=120}, item: 42={Item=VDub Chicken Caesar Wrap, Serving size=1 wrap, Meal=Lunch, Calories=600}, item: 40={Item=VDub Vegan Zucchini Muffin, Serving size=1 muffin, Meal=Breakfast, Calories=150}, item: 45={Item=VDub Spicy-sweet Roasted Yams, Serving size=1 serving, Meal=Lunch, Calories=180}, item: 46={Item=VDub Turkey Burger, Serving size=1 patty, Meal=Lunch, Calories=190}, item: 43={Item=VDub Jalapeno Ranch Mac And Cheese, Serving size=1 cup, Meal=Lunch, Calories=350}, item: 44={Item=VDub Vegan Bbq Jackfruit, Serving size=1/2 cup, Meal=Lunch, Calories=90}, item: 49={Item=VDub Cheese Manicotti , Serving size=1 piece, Meal=Dinner, Calories=240}, item: 47={Item=VDub Gardein Blk Bean Patty, Serving size=1 patty, Meal=Lunch, Calories=150}, item: 48={Item=VDub Seasoned French Fries, Serving size=1 serving, Meal=Lunch, Calories=360}, item: 29={Item=Ratty Breaded Chicken Cutlet, Serving size=1 piece, Meal=Dinner, Calories=250}, item: 30={Item=Ratty Veggie Pizza, Serving size=1 slice, Meal=Dinner, Calories=200}, item: 31={Item=Ratty Pepperoni Pizza, Serving size=1 slice, Meal=Dinner, Calories=260}, item: 34={Item=VDub Scrambled Eggs, Serving size=2 eggs, Meal=Breakfast, Calories=180}, item: 35={Item=VDub Veggie Sausage Pattie , Serving size=1 patty, Meal=Breakfast, Calories=70}, item: 32={Item=Ratty Rigatoni, Serving size=8oz, Meal=Dinner, Calories=280}, item: 33={Item=Ratty Whole Wheat Penne, Serving size=4oz, Meal=Dinner, Calories=300}, item: 38={Item=VDub Tater Tots , Serving size=10 tots, Meal=Breakfast, Calories=150}, item: 39={Item=VDub Cranberry Coffee Cake, Serving size=1 slice, Meal=Breakfast, Calories=350}, item: 36={Item=VDub Applewood Smoked Bacon , Serving size=3 pieces , Meal=Breakfast, Calories=120}, item: 37={Item=VDub Tex Mex Tofu Scramble, Serving size=1 cup, Meal=Breakfast, Calories=200}, item: 9={Item=Ratty Garlicky Green Beans, Serving size=5oz, Meal=Lunch, Calories=100}, item: 18={Item=Ratty Whole Wheat Penne, Serving size=4oz, Meal=Lunch, Calories=300}, item: 19={Item=Ratty French Onion Soup, Serving size=1 cup, Meal=Dinner, Calories=380}, item: 20={Item=Ratty Minestrone Soup, Serving size=1 cup, Meal=Dinner, Calories=270}, item: 23={Item=Ratty Cajun Pasta, Serving size=1 bowl, Meal=Dinner, Calories=500}, item: 24={Item=Ratty Cumin Roasted Sweet Potatoes, Serving size=4oz, Meal=Dinner, Calories=150}, item: 21={Item=Ratty Spicy Cuban Beef Stir-fry, Serving size=1 cup, Meal=Dinner, Calories=150}, item: 22={Item=Ratty Cuban Style Black Beans, Serving size=1 cup, Meal=Dinner, Calories=200}, item: 27={Item=Ratty Vanilla Cake, Serving size=1 slice, Meal=Dinner, Calories=250}, item: 28={Item=Ratty Saugy Hot Dog, Serving size=1 piece, Meal=Dinner, Calories=170}, item: 25={Item=Ratty Chicken Taco Salad, Serving size=4oz, Meal=Dinner, Calories=250}, item: 26={Item=Ratty Smores Cupcakes, Serving size=1 cupcake, Meal=Dinner, Calories=280}, item: 52={Item=VDub Vegan Vanilla Cake, Serving size=1 slice, Meal=Dinner, Calories=250}, item: 0={Item=Ratty Steak & Egg Frittata, Serving size=1 serving, Meal=Breakfast, Calories=400}, item: 53={Item=VDub Turkey Burger 4 Oz Butterball, Serving size=1 patty, Meal=Dinner, Calories=190}, item: 50={Item=VDub Creamy Pesto Pasta , Serving size=1 serving, Meal=Dinner, Calories=300}, item: 51={Item=VDub Roasted Butternut Squash, Serving size=1 cup, Meal=Dinner, Calories=80}, item: 3={Item=Ratty Zucchini Muffin, Serving size=1 muffin, Meal=Breakfast, Calories=250}, item: 12={Item=Ratty Grilled Chicken, Serving size=1 piece, Meal=Lunch, Calories=280}, item: 56={Item=VDub Chipotle Chicken, Serving size=1 serving, Meal=Dinner, Calories=180}, item: 4={Item=Ratty Turkey Breakfast Sausage, Serving size=1 sausage, Meal=Breakfast, Calories=100}, item: 13={Item=Ratty Saugy Hot Dog, Serving size=1 piece, Meal=Lunch, Calories=170}, item: 1={Item=Ratty Veggie Sausage Patty, Serving size=2 patties, Meal=Breakfast, Calories=160}, item: 10={Item=Ratty Mint Chocolate Chip Cookie, Serving size=1 piece, Meal=Lunch, Calories=100}, item: 54={Item=VDub Seasoned French Fries, Serving size=1 serving, Meal=Dinner, Calories=360}, item: 2={Item=Ratty Cranberry Coffee Cake, Serving size=1 slice, Meal=Breakfast, Calories=400}, item: 11={Item=Ratty Italian Salad, Serving size=1 serving, Meal=Lunch, Calories=200}, item: 55={Item=VDub Popcorn Shrimp, Serving size=12 pieces, Meal=Dinner, Calories=230}, item: 7={Item=Ratty Tortellini, Serving size=3oz, Meal=Lunch, Calories=250}, item: 16={Item=Ratty Pepperoni Pizza, Serving size=1 slice, Meal=Lunch, Calories=260}, item: 8={Item=Ratty Balsamic Marinated Chicken, Serving size=1 piece, Meal=Lunch, Calories=140}, item: 17={Item=Ratty Rigatoni, Serving size=8oz, Meal=Lunch, Calories=280}, item: 5={Item=Ratty French Onion Soup, Serving size=1 cup, Meal=Lunch, Calories=380}, item: 14={Item=Ratty Breaded Chickn Cutlet, Serving size=1 piece, Meal=Lunch, Calories=250}, item: 6={Item=Ratty Minestrone Soup, Serving size=1 cup, Meal=Lunch, Calories=270}, item: 15={Item=Ratty Veggie Pizza, Serving size=1 slice, Meal=Lunch, Calories=200}}";
+    for (int i = 25; i<25;i++) {
+      HttpURLConnection loadConnection = tryRequest("menu?restriction=Halal");
+      Map<String, Object> body =
+          adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
+      //System.out.println(body.toString());
+      assertEquals(200, loadConnection.getResponseCode());
+      assertEquals(body.toString(),res);
+    }
+  }
 }

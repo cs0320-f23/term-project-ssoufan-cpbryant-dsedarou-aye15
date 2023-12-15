@@ -7,6 +7,7 @@
     <list default="true" id="f91046b6-4395-48f3-a8e1-fa847fb4a5d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/brown/cs/student/RealTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/brown/cs/student/RealTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/brown/cs/student/RealTesting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/brown/cs/student/RealTesting.class" afterDir="false" />
     </list>
     <list id="210401e8-d91f-4462-b29b-60207ac8d557" name="Changes by channingbryant" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/edu/brown/cs/student/main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RealTesting.FuzzTest">
+  <component name="RunManager" selected="JUnit.RealTesting.PropertyBasedTestSameResultFromSameInput">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.main.Main" />
       <module name="s0" />
@@ -73,21 +74,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuMockTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="s0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.brown.cs.student.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
-      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,22 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuMockTesting.testValidNoRestrictionSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="s0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.brown.cs.student.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
-      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.MenuMockTesting" />
-      <option name="METHOD_NAME" value="testValidNoRestrictionSearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RealTesting.FuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="s0" />
       <extension name="coverage">
@@ -135,6 +105,38 @@
       <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
       <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.RealTesting" />
       <option name="METHOD_NAME" value="FuzzTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealTesting.PropertyBasedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="s0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.brown.cs.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
+      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.RealTesting" />
+      <option name="METHOD_NAME" value="PropertyBasedTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealTesting.PropertyBasedTestSameResultFromSameInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="s0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.brown.cs.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.brown.cs.student" />
+      <option name="MAIN_CLASS_NAME" value="edu.brown.cs.student.RealTesting" />
+      <option name="METHOD_NAME" value="PropertyBasedTestSameResultFromSameInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RealTesting.PropertyBasedTestSameResultFromSameInput" />
+        <item itemvalue="JUnit.RealTesting.PropertyBasedTest" />
         <item itemvalue="JUnit.RealTesting.FuzzTest" />
         <item itemvalue="JUnit.MenuMockTesting.testValidEggsSearch" />
         <item itemvalue="JUnit.RealTesting.testValidHalalSearch" />
-        <item itemvalue="JUnit.MenuMockTesting" />
-        <item itemvalue="JUnit.MenuMockTesting.testValidNoRestrictionSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +198,7 @@
       <workItem from="1702537609288" duration="17000" />
       <workItem from="1702537648493" duration="1291000" />
       <workItem from="1702621875907" duration="1836000" />
-      <workItem from="1702655139074" duration="1500000" />
+      <workItem from="1702655139074" duration="2270000" />
     </task>
     <servers />
   </component>

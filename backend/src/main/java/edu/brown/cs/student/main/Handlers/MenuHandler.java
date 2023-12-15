@@ -67,9 +67,9 @@ public class MenuHandler implements Route{
     List<List<String>> result = searcher.getNoHeaderResult();
 
 
-    if (!result.toString().contains(value)){
-      return new FailureResponse(failure).serialize();
-    }
+//    if (!result.toString().contains(value)){
+//      return new FailureResponse(failure).serialize();
+//    }
 
 
     Searcher all = new Searcher(this.filepath,"-");
@@ -84,6 +84,8 @@ public class MenuHandler implements Route{
     List<List<String>> filteredItems = allResult.stream()
         .filter(item -> item.contains(value))
         .collect(Collectors.toList());
+
+    System.out.println(filteredItems);
 
 
     if (result.isEmpty()){

@@ -13,7 +13,6 @@ export function searchCommandFunction(
   selectedOption: string,
   commandString: string,
   setItems: React.Dispatch<React.SetStateAction<any[]>> // Add setItems function to update state
-
 ): Promise<string> {
   return new Promise(async (resolve) => {
     try {
@@ -64,8 +63,11 @@ export function processSearchResult(
       Object.keys(parsedData).forEach((key) => {
         const item = parsedData[key];
         // console.log("meals: " + item.Meal)
-        const itemInfo = { item: item.Item, calories: item.Calories, portionSize: item['Serving size'] };
-
+        const itemInfo = {
+          item: item.Item,
+          calories: item.Calories,
+          portionSize: item["Serving size"],
+        };
 
         if (item.Meal.toLowerCase() === "breakfast") {
           breakfastArray.push(itemInfo);
@@ -173,18 +175,16 @@ export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [itemsProp, setItems] = useState<any[]>([]); // State to store selected items
 
-
   useEffect(() => {
     // This will log the commandString whenever it changes
     // console.log("Command String:", props.commandString);
     // console.log("Items prop", itemsProp);
-
-  }, [props.commandString, itemsProp ]);
+  }, [props.commandString, itemsProp]);
 
   const handleOptionChange = async (selectedValue: string) => {
     setSelectedOption(selectedValue);
     props.onSelect(selectedValue, itemsProp); // Pass the updated itemsProp here
-    console.log("items prop:" , itemsProp)
+    console.log("items prop:", itemsProp);
     const result = await searchCommandFunction(
       selectedValue,
       props.commandString,
@@ -195,44 +195,8 @@ export function Selector(props: SelectorProps) {
 
   return (
     <div>
-      <p className="restriction">Select an allergy:</p>
+      <p className="restriction">Select your restriction:</p>
       <div className="radio-container">
-        <input
-          type="radio"
-          id="Eggs"
-          name="restrictions"
-          value="Eggs"
-          onChange={() => handleOptionChange("Eggs")}
-        />
-        <label htmlFor="Eggs">Eggs</label>
-
-        <input
-          type="radio"
-          id="Soy"
-          name="restrictions"
-          value="Soy"
-          onChange={() => handleOptionChange("Soy")}
-        />
-        <label htmlFor="Soy">Soy</label>
-
-        <input
-          type="radio"
-          id="Milk"
-          name="restrictions"
-          value="Milk"
-          onChange={() => handleOptionChange("Milk")}
-        />
-        <label htmlFor="Milk">Milk</label>
-
-        <input
-          type="radio"
-          id="Wheat"
-          name="restrictions"
-          value="Wheat"
-          onChange={() => handleOptionChange("Wheat")}
-        />
-        <label htmlFor="Wheat">Wheat</label>
-
         <input
           type="radio"
           id="Gluten"
@@ -241,24 +205,6 @@ export function Selector(props: SelectorProps) {
           onChange={() => handleOptionChange("Gluten")}
         />
         <label htmlFor="Gluten">Gluten</label>
-
-        <input
-          type="radio"
-          id="Alcohol"
-          name="restrictions"
-          value="Alcohol"
-          onChange={() => handleOptionChange("Alcohol")}
-        />
-        <label htmlFor="Alcohol">Alcohol</label>
-
-        <input
-          type="radio"
-          id="Shellfish"
-          name="restrictions"
-          value="Shellfish"
-          onChange={() => handleOptionChange("Shellfish")}
-        />
-        <label htmlFor="Shellfish">Shellfish</label>
 
         <input
           type="radio"

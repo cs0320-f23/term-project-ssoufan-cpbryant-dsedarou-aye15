@@ -11,10 +11,7 @@ function App() {
       <p className="App-header">
         <h1>Brown Bites</h1>
       </p>
-      {/* <div> */}
-        {/* <p>Enter your daily calorie limit:</p> */}
-        <Display />
-      {/* </div> */}
+      <Display />
     </div>
   );
 }

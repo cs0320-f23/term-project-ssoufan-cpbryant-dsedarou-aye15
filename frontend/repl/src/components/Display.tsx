@@ -39,24 +39,16 @@ export default function Display() {
   };
 
   const handleSelect = async (selectedOption: string) => {
-    // console.log("Selected option:", selectedOption);
-    setCommandString(selectedOption); // Set the commandString when an option is selected
-    // Remove this line: setSelectedItems(itemsProp);
-
-    // Call the searchCommandFunction and update items directly
+    setCommandString(selectedOption);
     const result = await searchCommandFunction(
       selectedOption,
       commandString,
       setSelectedItems
     );
-
-    // const result = await searchCommandFunction(selectedOption);
   };
 
   return (
     <div className="Display">
-      {/* <History history={history} />
-      <hr></hr> */}
       <MenuButton />
       <p className="limit">Enter your daily calorie limit:</p>
       <Input
@@ -64,7 +56,6 @@ export default function Display() {
         setHistory={setHistory}
         setCommandString={setCommandString}
       />
-      {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
       <Generate />
       <Calendar

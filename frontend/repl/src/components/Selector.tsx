@@ -20,8 +20,6 @@ export function searchCommandFunction(
         `http://localhost:2023/menu?restriction=` + selectedOption
       );
       const json = await response.json();
-      // console.log(json);
-      // console.log(commandString);
       processSearchResult(commandString, json, setItems);
     } catch (error) {
       resolve("An error occurred: " + error);
@@ -166,8 +164,7 @@ export function processSearchResult(
       console.error("Parsed data is not an object.");
     }
   } catch (error) {
-    // console.log("No restrictions.");
-    // console.error("Error processing search result:", error);
+    console.log("No restrictions.");
   }
 }
 
@@ -175,11 +172,7 @@ export function Selector(props: SelectorProps) {
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [itemsProp, setItems] = useState<any[]>([]); // State to store selected items
 
-  useEffect(() => {
-    // This will log the commandString whenever it changes
-    // console.log("Command String:", props.commandString);
-    // console.log("Items prop", itemsProp);
-  }, [props.commandString, itemsProp]);
+  useEffect(() => {}, [props.commandString, itemsProp]);
 
   const handleOptionChange = async (selectedValue: string) => {
     setSelectedOption(selectedValue);
@@ -190,7 +183,6 @@ export function Selector(props: SelectorProps) {
       props.commandString,
       setItems
     );
-    // Use the result as needed
   };
 
   return (

@@ -138,7 +138,7 @@ button {
 }
 
 input[type="radio"]:checked + .radio-label:before {
-  background-color: #543b1f; /* Color when selected */
+  background-color: #543b1f;
   font-family: "font";
 }
 
@@ -151,35 +151,7 @@ label {
 
 .restriction {
   margin-top: 40px;
-  /* margin-right: 490px; */
 }
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.repl-history {
-  flex: 1 auto;
-  max-height: 100vh;
-  overflow-y: auto;
-  width: 100%;
-}
-
-.repl-input {
-  flex: 0 auto;
-  height: 10vh;
-  width: 100%;
-}
-
-.repl-command-box {
-  flex: 0 auto;
-  width: 90%;
-  max-width: 100%;
-} */
 
 .button-container {
   display: flex;
@@ -190,9 +162,6 @@ label {
 
 .centered-button {
   justify-self: center;
-  /* margin-left: 500px; */
-  /* margin-top: 0px; */
-  /* margin-bottom: 100px; */
   cursor: pointer;
 }
 

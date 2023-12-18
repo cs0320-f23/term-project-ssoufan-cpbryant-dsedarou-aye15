@@ -19,7 +19,6 @@ export function CommunityInput(props: CommunityInputProps) {
   // Manages the contents of the input box
   const [commandString, setCommandString] = useState<string>("");
 
-  // HandleSubmit- excutes proper functionality when the submit button is clicked
   function handleSubmit(): void {
     props.setHistory(props.history.concat(commandString));
     setCommandString("");

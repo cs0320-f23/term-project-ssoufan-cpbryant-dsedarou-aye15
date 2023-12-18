@@ -32,7 +32,6 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, itemsProp }) => {
                 .map((item, index) => (
                   <div key={index}>
                     {item.item} - {item.calories} calories
-                    {/* You can include additional details if needed */}
                   </div>
                 ))}
             </td>
@@ -45,7 +44,6 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, itemsProp }) => {
                 .map((item, index) => (
                   <div key={index}>
                     {item.item} - {item.calories} calories
-                    {/* You can include additional details if needed */}
                   </div>
                 ))}
             </td>
@@ -58,7 +56,6 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, itemsProp }) => {
                 .map((item, index) => (
                   <div key={index}>
                     {item.item} - {item.calories} calories
-                    {/* You can include additional details if needed */}
                   </div>
                 ))}
             </td>
@@ -68,10 +65,6 @@ const Calendar: React.FC<CalendarProps> = ({ mealPlan, itemsProp }) => {
     </div>
   );
 };
-
-
-
-
 
 interface MealSlotProps {
   day: string;

@@ -4,23 +4,15 @@ import { ControlledInput } from "./ControlledInput";
 interface InputProps {
   history: string[];
   setHistory: Dispatch<SetStateAction<string[]>>;
-  setCommandString: Dispatch<SetStateAction<string>>; // Add setCommandString prop
+  setCommandString: Dispatch<SetStateAction<string>>;
 }
-
 
 export function Input(props: InputProps) {
   const [commandString, setCommandString] = useState<string>("");
 
   const handleCraftMealPlan = () => {
-    // Log the input for calories when submitting the form
-    // console.log("Input for calories:", commandString);
     props.setCommandString(commandString);
-    
-
-    // Here, you can perform any further actions related to crafting the meal plan
   };
-  
-  
 
   return (
     <div className="Input">

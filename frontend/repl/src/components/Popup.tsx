@@ -27,22 +27,22 @@ function Popup(props) {
             <td>Ratty Jelly Donut</td>
           </tr>
           <tr>
-            <td>Ratty Balsamic Marinated Chicken Garlicky Green Beans</td>
-            <td>Ratty Pesto Pasta Shrimp Ratty Romano-dijon Crusted Chicken</td>
-            <td>Vdub Rotisserie Style Pesto Chicken Vdub Spicy Green Beans</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Ratty Chipotle Shrimp</td>
+            <td>Ratty Balsamic Marinated Chicken</td>
+            <td>Ratty Pesto Pasta Shrimp</td>
+            <td>Vdub Rotisserie Style Pesto Chicken</td>
+            <td>Vdub Chicken Broccoli Pasta Alfredo</td>
+            <td>Ratty Stir Fried Bok Choy</td>
+            <td>Ratty Ratatouille</td>
           </tr>
           <tr>
-            <td>Ratty French Onion Soup Ratty Spicy Cuban Beef Stir-fry</td>
-            <td>Vdub Sausage And Broccoli Rabe Pasta Vdub Chicken Marsala</td>
-            <td>Ratty Udon Mushroom Noodles Ratty Steamed Jasmine Rice</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Ratty Beef Burgundy</td>
+            <td>Ratty Spicy Cuban Beef Stir-fry</td>
+            <td>Vdub Sausage And Broccoli Rabe Pasta</td>
+            <td>Ratty Udon Mushroom Noodles</td>
+            <td>Vdub Ropa Vieja</td>
+            <td>Ratty Gnocchi W/ chunky Marinara Sauce</td>
+            <td>Ratty Scallop Scampi</td>
           </tr>
         </table>
         <button

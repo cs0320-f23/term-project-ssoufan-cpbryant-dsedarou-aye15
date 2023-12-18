@@ -243,3 +243,7 @@ label {
   height: 50px;
   font-size: 15px;
 }
+
+.popup-inner td {
+  color: #543b1f;
+}

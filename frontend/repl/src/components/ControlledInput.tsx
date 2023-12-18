@@ -32,7 +32,7 @@ export function ControlledInput({
       type="text"
       className="command-box"
       value={value}
-      placeholder="(Default 2500 calories)"
+      placeholder="(Ex: 2500 calories)"
       id="inputBox"
       onChange={(ev) => setValue(ev.target.value)}
       aria-label={ariaLabel}

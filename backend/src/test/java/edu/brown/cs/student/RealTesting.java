@@ -84,9 +84,6 @@ public class RealTesting {
         adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
     assertEquals(200, loadConnection.getResponseCode());
     assertEquals(body.get("result"),"failure");
-//    assertEquals("Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
-//            + "Vegan, Vegetarian, Halal, Gluten or leave it empty for no restriction]",
-//        body.get("error_description"));
   }
 
 
@@ -103,9 +100,6 @@ public class RealTesting {
         adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
     assertEquals(200, loadConnection.getResponseCode());
     assertEquals("failure", body.get("result"));
-//    assertEquals("Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
-//            + "Vegan, Vegetarian, Halal, Gluten or leave it empty for no restriction]",
-//        body.get("error_description"));
   }
 
 
@@ -254,7 +248,6 @@ public class RealTesting {
       Map<String, Object> body =
           adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
       assertEquals(200, loadConnection.getResponseCode());
-      //System.out.println(body.toString());
       assert body != null;
       Assert.assertTrue(isValid(body.toString()));
     }
@@ -267,7 +260,6 @@ public class RealTesting {
       HttpURLConnection loadConnection = tryRequest("menu?restriction=Halal");
       Map<String, Object> body =
           adapter.fromJson(new Buffer().readFrom(loadConnection.getInputStream()));
-      //System.out.println(body.toString());
       assertEquals(200, loadConnection.getResponseCode());
       assertEquals(body.toString(),res);
     }

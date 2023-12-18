@@ -4,8 +4,6 @@ import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
 import edu.brown.cs.student.main.CSV.CSVData;
-//import edu.brown.cs.student.main.CSV.CSVData.CSVRowCreator;
-import edu.brown.cs.student.main.CSV.Parser;
 import edu.brown.cs.student.main.Exceptions.FactoryFailureException;
 import edu.brown.cs.student.main.CSV.Searcher;
 import java.lang.reflect.Type;
@@ -27,7 +25,6 @@ import java.util.List;
  * and generates JSON responses containing the search results or error information.
  */
 public class MenuHandler implements Route{
-  private CSVData data;
   private final String filepath;
 
   public MenuHandler(String filepath) {
@@ -48,45 +45,31 @@ public class MenuHandler implements Route{
    */
   public Object handle(Request request, Response response)
       throws IOException, FactoryFailureException {
-//    this.filepath = data.getFilePath();
     HashMap<String, Object> failure = new HashMap<>();
-
 
     if (this.filepath == null || this.filepath.isEmpty()) {
       return new FailureResponse(failure).serialize();
     }
 
-
     if(!request.queryParams().toString().equals("[restriction]")){
       return new FailureResponse(failure).serialize();
     }
-
-
     String value = request.queryParams("restriction");
     Searcher searcher = new Searcher(this.filepath, value);
     List<List<String>> result = searcher.getNoHeaderResult();
 
-
-//    if (!result.toString().contains(value)){
-//      return new FailureResponse(failure).serialize();
-//    }
-
-
     Searcher all = new Searcher(this.filepath,"-");
     List<List<String>> allResult = all.getNoHeaderResult();
-
 
     if (value.isEmpty()){
       return new SuccessResponse(allResult, this.filepath).serialize();
     }
-
 
     List<List<String>> filteredItems = allResult.stream()
         .filter(item -> item.contains(value))
         .collect(Collectors.toList());
 
     System.out.println(filteredItems);
-
 
     if (result.isEmpty()){
       return new SuccessResponse(allResult, this.filepath).serialize();
@@ -108,13 +91,9 @@ public class MenuHandler implements Route{
     String serialize() {
       try {
         Moshi moshi = new Moshi.Builder().build();
-//        JsonAdapter<SearchHandler.SuccessResponse> adapter = moshi.adapter(
-//            SearchHandler.SuccessResponse.class);
         Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
         JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
         Map<String, Object> responseMap = new HashMap<>();
-//        responseMap.put("data", data);
-//        System.out.println(data);
         for (int i = 0; i < data.size(); i++){
           Map<String, String> map = new HashMap<>();
           map.put("Meal", data.get(i).get(0));
@@ -122,15 +101,8 @@ public class MenuHandler implements Route{
           map.put("Calories", data.get(i).get(2));
           map.put("Serving size", data.get(i).get(3));
           responseMap.put("item: " + i, map);
-//          int menuIndex = filepath.indexOf("Menu");
-//          int lastSlashIndex = filepath.lastIndexOf("/", menuIndex);
-//          String dayOfWeek = filepath.substring(lastSlashIndex + 1, menuIndex);
-//          responseMap.put("day: ", dayOfWeek);
         }
-//        System.out.println(responseMap);
-//        responseMap.put("result", "success");
         return adapter.toJson(responseMap);
-//        return adapter.toJson(this);
       }catch (Exception e) {
         e.printStackTrace();
         throw e;
@@ -151,8 +123,6 @@ public class MenuHandler implements Route{
      */
     String serialize() {
       Moshi moshi = new Moshi.Builder().build();
-//        JsonAdapter<SearchHandler.SuccessResponse> adapter = moshi.adapter(
-//            SearchHandler.SuccessResponse.class);
       Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
       JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
       Map<String, Object> responseMap = new HashMap<>();

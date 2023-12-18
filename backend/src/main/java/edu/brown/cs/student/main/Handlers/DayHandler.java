@@ -27,7 +27,6 @@ import java.util.List;
  * and generates JSON responses containing the search results or error information.
  */
 public class DayHandler implements Route{
-  private CSVData data;
   private final String filepath;
 
   public DayHandler(String filepath) {
@@ -43,32 +42,14 @@ public class DayHandler implements Route{
    * @param request  The HTTP request object.
    * @param response The HTTP response object.
    * @return A JSON response containing either the search results or an error message.
-   * @throws IOException If there are any I/O errors during the search operation.
-   * @throws FactoryFailureException If there are any failures related to factory operations.
    */
   public Object handle(Request request, Response response)
-      throws IOException, FactoryFailureException {
-//    this.filepath = data.getFilePath();
+       {
     HashMap<String, Object> failure = new HashMap<>();
 
     if (this.filepath == null || this.filepath.isEmpty()) {
       return new FailureResponse(failure).serialize();
     }
-
-//    String value = request.queryParams("restriction");
-//    Searcher searcher = new Searcher(this.filepath, value);
-//    List<List<String>> result = searcher.getNoHeaderResult();
-
-//    Searcher all = new Searcher(this.filepath,"-");
-//    List<List<String>> allResult = all.getNoHeaderResult();
-
-//    List<List<String>> filteredItems = allResult.stream()
-//        .filter(item -> !item.contains(value))
-//        .collect(Collectors.toList());
-
-//    if (result.isEmpty()){
-//      return new FailureResponse(failure).serialize();
-//    }
     return new SuccessResponse(this.filepath).serialize();
   }
 
@@ -85,29 +66,16 @@ public class DayHandler implements Route{
     String serialize() {
       try {
         Moshi moshi = new Moshi.Builder().build();
-//        JsonAdapter<SearchHandler.SuccessResponse> adapter = moshi.adapter(
-//            SearchHandler.SuccessResponse.class);
         Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
         JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
         Map<String, Object> responseMap = new HashMap<>();
-//        responseMap.put("data", data);
-//        System.out.println(data);
-//        for (int i = 0; i < data.size(); i++){
-//          Map<String, String> map = new HashMap<>();
-//          map.put("Meal", data.get(i).get(0));
-//          map.put("Item", data.get(i).get(1));
-//          map.put("Calories", data.get(i).get(2));
-//          map.put("Serving size", data.get(i).get(3));
-//          responseMap.put("item: " + i, map);
+
           int menuIndex = filepath.indexOf("Menu");
           int lastSlashIndex = filepath.lastIndexOf("/", menuIndex);
           String dayOfWeek = filepath.substring(lastSlashIndex + 1, menuIndex);
           responseMap.put("day", dayOfWeek);
-//        }
-//        System.out.println(responseMap);
-//        responseMap.put("result", "success");
+
         return adapter.toJson(responseMap);
-//        return adapter.toJson(this);
       }catch (Exception e) {
         e.printStackTrace();
         throw e;
@@ -128,8 +96,6 @@ public class DayHandler implements Route{
      */
     String serialize() {
       Moshi moshi = new Moshi.Builder().build();
-//        JsonAdapter<SearchHandler.SuccessResponse> adapter = moshi.adapter(
-//            SearchHandler.SuccessResponse.class);
       Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
       JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
       Map<String, Object> responseMap = new HashMap<>();

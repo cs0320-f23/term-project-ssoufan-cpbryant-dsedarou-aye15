@@ -59,11 +59,6 @@ public class MenuMockTesting {
     // Configure the connection (but don't actually send the request yet)
     URL requestURL = new URL("http://localhost:" + Spark.port() + "/" + apiCall);
     HttpURLConnection clientConnection = (HttpURLConnection) requestURL.openConnection();
-
-    // The default method is "GET", which is what we're using here.
-    // If we were using "POST", we'd need to say so.
-    // clientConnection.setRequestMethod("GET");
-
     clientConnection.connect();
     return clientConnection;
   }
@@ -82,7 +77,6 @@ public class MenuMockTesting {
     assertEquals("Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
         + "Alcohol, Soy, Shellfish, Gluten, Wheat, Eggs, Milk, or leave it empty for no restriction]",
         body.get("error_description"));
-//    assertEquals("The search query must be formatted as 'mapsKeyWord?Area=[area description]'", body.get("error_description"));
   }
 
   /**
@@ -99,7 +93,6 @@ public class MenuMockTesting {
     assertEquals("Please input a proper query, EX: [http://localhost:2025/menu?restriction= "
             + "Alcohol, Soy, Shellfish, Gluten, Wheat, Eggs, Milk, or leave it empty for no restriction]",
         body.get("error_description"));
-//    assertEquals("The search query must be formatted as 'mapsKeyWord?Area=[area description]'", body.get("error_description"));
   }
 
   /**

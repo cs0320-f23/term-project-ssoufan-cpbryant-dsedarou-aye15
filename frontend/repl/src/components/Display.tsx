@@ -8,6 +8,7 @@ import { Selector, searchCommandFunction } from "./Selector";
 import { CommunityHistory } from "./CommnityHistory";
 import { CommunityInput } from "./CommunityInput";
 import { Generate } from "./Generate";
+import { MenuButton } from "./MenuButton";
 
 /**
  * The main component.
@@ -25,7 +26,6 @@ export default function Display() {
   const [commandString, setCommandString] = useState<string>(""); // Initialize commandString state
   const [itemsProp, setSelectedItems] = useState<any[]>([]); // New state for selected items
 
-
   // Function to add a meal to the meal plan
   const addMeal = (meal: string) => {
     setMealPlan([...mealPlan, meal]);
@@ -42,9 +42,13 @@ export default function Display() {
     // console.log("Selected option:", selectedOption);
     setCommandString(selectedOption); // Set the commandString when an option is selected
     // Remove this line: setSelectedItems(itemsProp);
-  
+
     // Call the searchCommandFunction and update items directly
-    const result = await searchCommandFunction(selectedOption, commandString, setSelectedItems);
+    const result = await searchCommandFunction(
+      selectedOption,
+      commandString,
+      setSelectedItems
+    );
 
     // const result = await searchCommandFunction(selectedOption);
   };
@@ -53,6 +57,7 @@ export default function Display() {
     <div className="Display">
       {/* <History history={history} />
       <hr></hr> */}
+      <MenuButton />
       <p className="limit">Enter your daily calorie limit:</p>
       <Input
         history={history}
@@ -62,7 +67,11 @@ export default function Display() {
       {/* <p>Select any restrictions:</p> */}
       <Selector onSelect={handleSelect} commandString={commandString} />
       <Generate />
-<Calendar mealPlan={mealPlan} removeMeal={removeMeal} itemsProp={itemsProp} />
+      <Calendar
+        mealPlan={mealPlan}
+        removeMeal={removeMeal}
+        itemsProp={itemsProp}
+      />
       <div className="repl">
         <hr></hr>
         <p className="App-header">

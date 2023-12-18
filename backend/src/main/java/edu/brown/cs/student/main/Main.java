@@ -8,7 +8,6 @@ import edu.brown.cs.student.main.Exceptions.FactoryFailureException;
 import edu.brown.cs.student.main.Handlers.BroadbandHandler;
 import edu.brown.cs.student.main.Handlers.DayHandler;
 import edu.brown.cs.student.main.Handlers.LoadHandler;
-//import edu.brown.cs.student.main.Handlers.MapKeywordHandler;
 import edu.brown.cs.student.main.Handlers.MenuHandler;
 import edu.brown.cs.student.main.Handlers.SearchHandler;
 import edu.brown.cs.student.main.Handlers.ViewHandler;
@@ -18,7 +17,6 @@ import spark.Spark;
 /** The Main class of our project. This is where execution begins. */
 public class Main {
 
-//  Parser p;
   /**
    * The initial method called when execution begins.
    *
@@ -40,7 +38,6 @@ public class Main {
     Spark.get("viewCSV", new ViewHandler(data));
     Spark.get("searchCSV", new SearchHandler(data));
     Spark.get("broadband", new BroadbandHandler(new RealBBSource()));
-//    Spark.get("keyword", new MapKeywordHandler("/Users/annieye/Desktop/cs32/server-annie-ye4-ShadiSoufan44/data/geoJSON/fullDownload.json"));
     Spark.get("menu", new MenuHandler(filepath));
     Spark.get("day", new DayHandler(filepath));
     // have to go to endpoint mock for the website to not have 404 error

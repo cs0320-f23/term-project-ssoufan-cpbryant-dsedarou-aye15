@@ -18,7 +18,7 @@ function Popup(props) {
             <th>Saturday</th>
           </tr>
           <tr>
-            <td>Ratty Blueberry French Toast Casserole</td>
+            <td>Ratty Blueberry French Toast Casserole Scrambled Eggs</td>
             <td>Ratty Cranberry Coffee Cake</td>
             <td>VDub Tex Mex Tofu Scramble</td>
             <td>Vdub Applewood Smoked Bacon</td>
@@ -27,45 +27,18 @@ function Popup(props) {
             <td>Ratty Jelly Donut</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Ratty Balsamic Marinated Chicken Garlicky Green Beans</td>
+            <td>Ratty Pesto Pasta Shrimp Ratty Romano-dijon Crusted Chicken</td>
+            <td>Vdub Rotisserie Style Pesto Chicken Vdub Spicy Green Beans</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Ratty French Onion Soup Ratty Spicy Cuban Beef Stir-fry</td>
+            <td>Vdub Sausage And Broccoli Rabe Pasta Vdub Chicken Marsala</td>
+            <td>Ratty Udon Mushroom Noodles Ratty Steamed Jasmine Rice</td>
             <td></td>
             <td></td>
             <td></td>

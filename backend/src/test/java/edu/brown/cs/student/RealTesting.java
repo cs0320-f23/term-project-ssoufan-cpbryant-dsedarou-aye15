@@ -1,7 +1,6 @@
 package edu.brown.cs.student;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;

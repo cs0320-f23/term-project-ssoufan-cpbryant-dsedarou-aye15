@@ -33,7 +33,7 @@ public class Main {
     // Setting up the handler for the GET /order and /mock endpoints
     CSVData data = new CSVData("");
 //    String filepath = "C:\\cs32\\term-project-ssoufan-cpbryant-dsedarou-aye15\\backend\\data\\MondayMenu.csv";
-    String filepath = "/Users/channingbryant/Desktop/cs320/term-project-ssoufan-cpbryant-dsedarou-aye15/backend/data/MondayMenu.csv";
+    String filepath = "C:\\cs32\\term-project-ssoufan-cpbryant-dsedarou-aye15\\backend\\data\\MondayMenu.csv";
     Spark.get("loadCSV", new LoadHandler(data));
     Spark.get("viewCSV", new ViewHandler(data));
     Spark.get("searchCSV", new SearchHandler(data));

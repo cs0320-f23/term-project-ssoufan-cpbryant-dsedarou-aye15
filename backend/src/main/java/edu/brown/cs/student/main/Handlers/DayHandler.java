@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * The `SearchHandler` class is responsible for handling HTTP requests related to searching within
+ * The `DayHandler` class is responsible for handling HTTP requests related to searching within
  * CSV data in a web application. It implements the Spark `Route` interface, allowing it to process
  * incoming HTTP GET requests. This class retrieves the file path from a `CSVData` object, performs
  * searches within the CSV data based on specified criteria (e.g., value, headers, column name or index),

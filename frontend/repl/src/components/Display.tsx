@@ -5,7 +5,7 @@ import { Input } from "./Input";
 import Calendar from "./Calendar";
 import React from "react";
 import { Selector, searchCommandFunction } from "./Selector";
-import { CommunityHistory } from "./CommnityHistory";
+import { CommunityHistory } from "./CommunityHistory";
 import { CommunityInput } from "./CommunityInput";
 import { Generate } from "./Generate";
 import { MenuButton } from "./MenuButton";

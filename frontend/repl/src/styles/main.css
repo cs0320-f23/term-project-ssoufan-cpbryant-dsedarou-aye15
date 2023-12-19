@@ -169,7 +169,8 @@ label {
   background-color: #543b1f;
   width: 200px;
   height: 100px;
-  transform: translate(310%, -30%);
+  margin-left: 30px;
+  transform: translate(250%, -30%);
 }
 
 .popup {
